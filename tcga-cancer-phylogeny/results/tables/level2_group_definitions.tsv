@@ -1,0 +1,10 @@
+group_name	group_type	included_project_codes	included_project_ids	n_projects	n_features_used	tree_attempted	reason_if_not_attempted
+carcinoma_all	primary	BLCA;BRCA;CESC;CHOL;COAD;ESCA;HNSC;KICH;KIRC;KIRP;LIHC;LUAD;LUSC;OV;PAAD;PRAD;READ;STAD;THCA;UCEC	TCGA-BLCA;TCGA-BRCA;TCGA-CESC;TCGA-CHOL;TCGA-COAD;TCGA-ESCA;TCGA-HNSC;TCGA-KICH;TCGA-KIRC;TCGA-KIRP;TCGA-LIHC;TCGA-LUAD;TCGA-LUSC;TCGA-OV;TCGA-PAAD;TCGA-PRAD;TCGA-READ;TCGA-STAD;TCGA-THCA;TCGA-UCEC	20	52	TRUE	
+pan_squamous	carcinoma_subgroup	LUSC;HNSC;CESC;ESCA;BLCA	TCGA-LUSC;TCGA-HNSC;TCGA-CESC;TCGA-ESCA;TCGA-BLCA	5	52	TRUE	
+gi_pancancreatobiliary	carcinoma_subgroup	COAD;READ;STAD;ESCA;PAAD;CHOL;LIHC	TCGA-COAD;TCGA-READ;TCGA-STAD;TCGA-ESCA;TCGA-PAAD;TCGA-CHOL;TCGA-LIHC	7	52	TRUE	
+kidney	carcinoma_subgroup	KIRC;KIRP;KICH	TCGA-KIRC;TCGA-KIRP;TCGA-KICH	3	51	TRUE	
+gynecologic_breast	carcinoma_subgroup	BRCA;OV;UCEC;CESC;UCS	TCGA-BRCA;TCGA-OV;TCGA-UCEC;TCGA-CESC;TCGA-UCS	5	52	TRUE	
+cns_glial	limited_noncarcinoma	GBM;LGG	TCGA-GBM;TCGA-LGG	2	51	FALSE	underpowered_project_count_2_lt_3
+melanocytic	limited_noncarcinoma	SKCM;UVM	TCGA-SKCM;TCGA-UVM	2	52	FALSE	underpowered_project_count_2_lt_3
+hematolymphoid	limited_noncarcinoma	LAML;DLBC	TCGA-LAML;TCGA-DLBC	2	42	FALSE	underpowered_project_count_2_lt_3
+sarcoma	project_level_singleton	SARC	TCGA-SARC	1	0	FALSE	underpowered_project_count_1_lt_3;insufficient_variable_features_0_lt_2;no_clinical_or_sarc_subtype_feature_metadata_found

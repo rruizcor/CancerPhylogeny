@@ -1,0 +1,2005 @@
+artifact: tcga_sample_reference_atlas_feature_definitions
+atlas_schema_version: 1.0.0
+generated_by: scripts/20_build_tcga_sample_reference_atlas.py
+feature_contract_sha256: 5748791f2949084b801c66d9cbe6eb7efec87b44376ebf7eadecc93342f249f7
+metadata_columns:
+- sample_barcode
+- patient_barcode
+- project_id
+- project_code
+- disease_type
+- primary_site
+- major_cancer_group
+raw_feature_order:
+- nonsynonymous_count
+- total_mutation_count
+- driver_mutation_TP53
+- driver_mutation_KRAS
+- driver_mutation_BRAF
+- driver_mutation_IDH1
+- driver_mutation_IDH2
+- driver_mutation_PIK3CA
+- driver_mutation_APC
+- driver_mutation_PTEN
+- driver_mutation_NF1
+- driver_mutation_BAP1
+- driver_mutation_VHL
+- driver_mutation_RB1
+- driver_mutation_CDKN2A
+- driver_mutation_SMAD4
+- driver_mutation_ARID1A
+- driver_mutation_TERT
+- driver_mutation_EGFR
+- driver_mutation_ERBB2
+- driver_mutation_ALK
+- driver_mutation_MET
+- driver_mutation_MYC
+- driver_mutation_CTNNB1
+- driver_mutation_POLE
+- driver_mutation_MSH2
+- driver_mutation_MSH6
+- driver_mutation_MLH1
+- driver_mutation_PMS2
+- driver_mutation_BRCA1
+- driver_mutation_BRCA2
+- driver_mutation_count_TP53
+- driver_mutation_count_KRAS
+- driver_mutation_count_BRAF
+- driver_mutation_count_IDH1
+- driver_mutation_count_IDH2
+- driver_mutation_count_PIK3CA
+- driver_mutation_count_APC
+- driver_mutation_count_PTEN
+- driver_mutation_count_NF1
+- driver_mutation_count_BAP1
+- driver_mutation_count_VHL
+- driver_mutation_count_RB1
+- driver_mutation_count_CDKN2A
+- driver_mutation_count_SMAD4
+- driver_mutation_count_ARID1A
+- driver_mutation_count_TERT
+- driver_mutation_count_EGFR
+- driver_mutation_count_ERBB2
+- driver_mutation_count_ALK
+- driver_mutation_count_MET
+- driver_mutation_count_MYC
+- driver_mutation_count_CTNNB1
+- driver_mutation_count_POLE
+- driver_mutation_count_MSH2
+- driver_mutation_count_MSH6
+- driver_mutation_count_MLH1
+- driver_mutation_count_PMS2
+- driver_mutation_count_BRCA1
+- driver_mutation_count_BRCA2
+- purity
+- ploidy
+- aneuploidy_score
+- arm_gain_count
+- arm_loss_count
+- total_arm_alteration_count
+- proliferation_score
+- immune_inflammatory_score
+- interferon_gamma_score
+- cytotoxic_t_cell_score
+- stromal_score
+- epithelial_score
+- EMT_score
+- hypoxia_score
+- cell_cycle_score
+- DNA_repair_score
+- angiogenesis_score
+- expression_pca_PC1
+- expression_pca_PC2
+- expression_pca_PC3
+- expression_pca_PC4
+- expression_pca_PC5
+- expression_pca_PC6
+- expression_pca_PC7
+- expression_pca_PC8
+- expression_pca_PC9
+- expression_pca_PC10
+- expression_pca_PC11
+- expression_pca_PC12
+- expression_pca_PC13
+- expression_pca_PC14
+- expression_pca_PC15
+- expression_pca_PC16
+- expression_pca_PC17
+- expression_pca_PC18
+- expression_pca_PC19
+- expression_pca_PC20
+feature_order: &id001
+- nonsynonymous_count
+- total_mutation_count
+- driver_mutation_TP53
+- driver_mutation_KRAS
+- driver_mutation_BRAF
+- driver_mutation_IDH1
+- driver_mutation_IDH2
+- driver_mutation_PIK3CA
+- driver_mutation_APC
+- driver_mutation_PTEN
+- driver_mutation_NF1
+- driver_mutation_BAP1
+- driver_mutation_VHL
+- driver_mutation_RB1
+- driver_mutation_CDKN2A
+- driver_mutation_SMAD4
+- driver_mutation_ARID1A
+- driver_mutation_TERT
+- driver_mutation_EGFR
+- driver_mutation_ERBB2
+- driver_mutation_ALK
+- driver_mutation_MET
+- driver_mutation_MYC
+- driver_mutation_CTNNB1
+- driver_mutation_POLE
+- driver_mutation_MSH2
+- driver_mutation_MSH6
+- driver_mutation_MLH1
+- driver_mutation_PMS2
+- driver_mutation_BRCA1
+- driver_mutation_BRCA2
+- driver_mutation_count_TP53
+- driver_mutation_count_KRAS
+- driver_mutation_count_BRAF
+- driver_mutation_count_IDH1
+- driver_mutation_count_IDH2
+- driver_mutation_count_PIK3CA
+- driver_mutation_count_APC
+- driver_mutation_count_PTEN
+- driver_mutation_count_NF1
+- driver_mutation_count_BAP1
+- driver_mutation_count_VHL
+- driver_mutation_count_RB1
+- driver_mutation_count_CDKN2A
+- driver_mutation_count_SMAD4
+- driver_mutation_count_ARID1A
+- driver_mutation_count_TERT
+- driver_mutation_count_EGFR
+- driver_mutation_count_ERBB2
+- driver_mutation_count_ALK
+- driver_mutation_count_MET
+- driver_mutation_count_MYC
+- driver_mutation_count_CTNNB1
+- driver_mutation_count_POLE
+- driver_mutation_count_MSH2
+- driver_mutation_count_MSH6
+- driver_mutation_count_MLH1
+- driver_mutation_count_PMS2
+- driver_mutation_count_BRCA1
+- driver_mutation_count_BRCA2
+- purity
+- ploidy
+- aneuploidy_score
+- arm_gain_count
+- arm_loss_count
+- total_arm_alteration_count
+- proliferation_score
+- immune_inflammatory_score
+- interferon_gamma_score
+- cytotoxic_t_cell_score
+- stromal_score
+- epithelial_score
+- EMT_score
+- hypoxia_score
+- cell_cycle_score
+- DNA_repair_score
+- angiogenesis_score
+- expression_pca_PC1
+- expression_pca_PC2
+- expression_pca_PC3
+- expression_pca_PC4
+- expression_pca_PC5
+- expression_pca_PC6
+- expression_pca_PC7
+- expression_pca_PC8
+- expression_pca_PC9
+- expression_pca_PC10
+- expression_pca_PC11
+- expression_pca_PC12
+- expression_pca_PC13
+- expression_pca_PC14
+- expression_pca_PC15
+- expression_pca_PC16
+- expression_pca_PC17
+- expression_pca_PC18
+- expression_pca_PC19
+- expression_pca_PC20
+dropped_features: []
+nearest_neighbor_feature_order: *id001
+preprocessing:
+  raw_matrix: Observed, pre-imputation numeric values for all candidate features.
+  missingness_filter: Drop features with missing fraction greater than 0.3.
+  imputation: Reference-median imputation using values saved in tcga_reference_scaler_parameters.json.
+  scaling: Population-standard-deviation z-score scaling using saved TCGA means and
+    standard deviations.
+  future_case_rule: Compute retained features in exact feature_order, impute with
+    saved medians, scale with saved means and standard deviations, then apply the
+    saved PCA or nearest-neighbor model.
+scope_limitations:
+- Reference construction only; no supervised CUP classifier is trained.
+- Mutation burden features are mutation-count proxies without callable-territory normalization.
+- Clinical WES/WTS projection requires assay harmonization and external validation.
+features:
+- name: nonsynonymous_count
+  feature_type: count
+  feature_class: mutation_count_proxy
+  source_layer: somatic_mutation
+  source_file: data/processed/features/tmb_by_sample.tsv
+  description: Number of nonsynonymous MC3 mutation records for the tumor sample;
+    a mutation-count proxy without callable-territory normalization.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 61.0
+  scaling_mean: 221.00078423683954
+  scaling_std: 867.1072413166114
+- name: total_mutation_count
+  feature_type: count
+  feature_class: mutation_count_proxy
+  source_layer: somatic_mutation
+  source_file: data/processed/features/tmb_by_sample.tsv
+  description: Total number of MC3 mutation records for the tumor sample; a mutation-count
+    proxy without callable-territory normalization.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 95.0
+  scaling_mean: 352.1608665817077
+  scaling_std: 1444.3769337992348
+- name: driver_mutation_TP53
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene TP53.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.37770806783648664
+  scaling_std: 0.4848140708846173
+- name: driver_mutation_KRAS
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene KRAS.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.07724732869326537
+  scaling_std: 0.2669834805807655
+- name: driver_mutation_BRAF
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene BRAF.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.07538476619939222
+  scaling_std: 0.26401118011261415
+- name: driver_mutation_IDH1
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene IDH1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.054308401137143414
+  scaling_std: 0.22662523845121604
+- name: driver_mutation_IDH2
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene IDH2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.008822664444662289
+  scaling_std: 0.09351376923618883
+- name: driver_mutation_PIK3CA
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene PIK3CA.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.13410449955886677
+  scaling_std: 0.34076455619229634
+- name: driver_mutation_APC
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene APC.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.08107048328595236
+  scaling_std: 0.2729433274980989
+- name: driver_mutation_PTEN
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene PTEN.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.08508969708852074
+  scaling_std: 0.2790151260019867
+- name: driver_mutation_NF1
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene NF1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.0619547103225174
+  scaling_std: 0.241073275564444
+- name: driver_mutation_BAP1
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene BAP1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.023723164395647485
+  scaling_std: 0.1521853339409043
+- name: driver_mutation_VHL
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene VHL.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.02019409861778257
+  scaling_std: 0.14066377287275442
+- name: driver_mutation_RB1
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene RB1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.044309381433192824
+  scaling_std: 0.20578158360310245
+- name: driver_mutation_CDKN2A
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene CDKN2A.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.03930987158121753
+  scaling_std: 0.19433117500155683
+- name: driver_mutation_SMAD4
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene SMAD4.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.026958141358690325
+  scaling_std: 0.16196110635944416
+- name: driver_mutation_ARID1A
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene ARID1A.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.08009018723654544
+  scaling_std: 0.27143277094883095
+- name: driver_mutation_TERT
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene TERT.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.011469463778060974
+  scaling_std: 0.10647964678146112
+- name: driver_mutation_EGFR
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene EGFR.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.03832957553181061
+  scaling_std: 0.1919906746989599
+- name: driver_mutation_ERBB2
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene ERBB2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.026566022938927555
+  scaling_std: 0.16081128494025515
+- name: driver_mutation_ALK
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene ALK.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.03176159200078424
+  scaling_std: 0.17536474353290044
+- name: driver_mutation_MET
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene MET.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.02401725321046956
+  scaling_std: 0.1531026608478564
+- name: driver_mutation_MYC
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene MYC.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.008332516419958828
+  scaling_std: 0.09090151588433465
+- name: driver_mutation_CTNNB1
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene CTNNB1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.04146652288991275
+  scaling_std: 0.19936662300729552
+- name: driver_mutation_POLE
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene POLE.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.03421233212430154
+  scaling_std: 0.18177416883297262
+- name: driver_mutation_MSH2
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene MSH2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.014410351926281737
+  scaling_std: 0.11917505478766284
+- name: driver_mutation_MSH6
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene MSH6.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.01921380256837565
+  scaling_std: 0.1372757529909748
+- name: driver_mutation_MLH1
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene MLH1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.014116263111459661
+  scaling_std: 0.11797031078719639
+- name: driver_mutation_PMS2
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene PMS2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.014312322321341045
+  scaling_std: 0.11877491212840818
+- name: driver_mutation_BRCA1
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene BRCA1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.02627193412410548
+  scaling_std: 0.15994286355284545
+- name: driver_mutation_BRCA2
+  feature_type: binary
+  feature_class: driver_mutation_binary
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Binary indicator that at least one nonsynonymous MC3 mutation record
+    affects configured driver gene BRCA2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.045093618272718364
+  scaling_std: 0.20750947897335373
+- name: driver_mutation_count_TP53
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene TP53.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.43476129791196944
+  scaling_std: 0.609601447253628
+- name: driver_mutation_count_KRAS
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene KRAS.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.08214880894029997
+  scaling_std: 0.2929018952716138
+- name: driver_mutation_count_BRAF
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene BRAF.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.08577590432310558
+  scaling_std: 0.3195959370147038
+- name: driver_mutation_count_IDH1
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene IDH1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.055288697186550335
+  scaling_std: 0.23405261561969834
+- name: driver_mutation_count_IDH2
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene IDH2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.009802960494069209
+  scaling_std: 0.10981608706468074
+- name: driver_mutation_count_PIK3CA
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene PIK3CA.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.16635623958435447
+  scaling_std: 0.47013477778812396
+- name: driver_mutation_count_APC
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene APC.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.13096755220076464
+  scaling_std: 0.5378550411729386
+- name: driver_mutation_count_PTEN
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene PTEN.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.1201842956572885
+  scaling_std: 0.44704412699163637
+- name: driver_mutation_count_NF1
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene NF1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.08773649642191941
+  scaling_std: 0.41210911388029253
+- name: driver_mutation_count_BAP1
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene BAP1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.027350259778453092
+  scaling_std: 0.18769344235557384
+- name: driver_mutation_count_VHL
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene VHL.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.0210763650622488
+  scaling_std: 0.14965521971165616
+- name: driver_mutation_count_RB1
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene RB1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.05293598666797373
+  scaling_std: 0.26408273130138643
+- name: driver_mutation_count_CDKN2A
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene CDKN2A.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.04411332222331144
+  scaling_std: 0.2309604121683468
+- name: driver_mutation_count_SMAD4
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene SMAD4.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.031075384766199393
+  scaling_std: 0.19631671159820188
+- name: driver_mutation_count_ARID1A
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene ARID1A.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.10440152926183707
+  scaling_std: 0.4021572515675287
+- name: driver_mutation_count_TERT
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene TERT.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.012547789432408587
+  scaling_std: 0.12142097401744534
+- name: driver_mutation_count_EGFR
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene EGFR.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.04881874326046466
+  scaling_std: 0.2916489977928369
+- name: driver_mutation_count_ERBB2
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene ERBB2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.03274188805019116
+  scaling_std: 0.21895837786496045
+- name: driver_mutation_count_ALK
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene ALK.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.040192138025683756
+  scaling_std: 0.26705545887848703
+- name: driver_mutation_count_MET
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene MET.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.031173414371140084
+  scaling_std: 0.22448993568836859
+- name: driver_mutation_count_MYC
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene MYC.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.00941084207430644
+  scaling_std: 0.11249570966815772
+- name: driver_mutation_count_CTNNB1
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene CTNNB1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.0483285952357612
+  scaling_std: 0.2522662700553202
+- name: driver_mutation_count_POLE
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene POLE.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.04950495049504951
+  scaling_std: 0.31559163268335105
+- name: driver_mutation_count_MSH2
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene MSH2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.01833153612390942
+  scaling_std: 0.16906415421620863
+- name: driver_mutation_count_MSH6
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene MSH6.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.0272522301735124
+  scaling_std: 0.22543488671759288
+- name: driver_mutation_count_MLH1
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene MLH1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.016567003234976962
+  scaling_std: 0.14692221175025444
+- name: driver_mutation_count_PMS2
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene PMS2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.017449269679443193
+  scaling_std: 0.15807327750873207
+- name: driver_mutation_count_BRCA1
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene BRCA1.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.03136947358102147
+  scaling_std: 0.2062549410824305
+- name: driver_mutation_count_BRCA2
+  feature_type: count
+  feature_class: driver_mutation_count
+  source_layer: somatic_mutation
+  source_file: data/processed/mutations/mc3_somatic_mutations.parquet plus config/driver_genes.csv
+  description: Count of nonsynonymous MC3 mutation records affecting configured driver
+    gene BRCA2.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES or an equivalent somatic mutation callset
+    processed with matching mutation filters.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.0
+  imputation_median: 0.0
+  scaling_mean: 0.06979707871777277
+  scaling_std: 0.4302438171287605
+- name: purity
+  feature_type: continuous
+  feature_class: purity_ploidy
+  source_layer: purity_ploidy
+  source_file: data/processed/features/purity_ploidy_by_sample.tsv
+  description: Tumor purity estimate harmonized from the project purity/ploidy layer.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES-derived or orthogonal purity and copy-number
+    estimates computed with compatible conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06715027938437408
+  imputation_median: 0.65
+  scaling_mean: 0.6313528085481815
+  scaling_std: 0.20266655157800523
+- name: ploidy
+  feature_type: continuous
+  feature_class: purity_ploidy
+  source_layer: purity_ploidy
+  source_file: data/processed/features/purity_ploidy_by_sample.tsv
+  description: Tumor ploidy estimate harmonized from the project purity/ploidy layer.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES-derived or orthogonal purity and copy-number
+    estimates computed with compatible conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06715027938437408
+  imputation_median: 2.06
+  scaling_mean: 2.4663189883344767
+  scaling_std: 0.7758110111542184
+- name: aneuploidy_score
+  feature_type: continuous
+  feature_class: copy_number_aneuploidy
+  source_layer: aneuploidy_arm_level_copy_number
+  source_file: data/processed/features/aneuploidy_by_sample.tsv
+  description: Sample-level aneuploidy score from the harmonized arm-level copy-number
+    layer.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES-derived or orthogonal purity and copy-number
+    estimates computed with compatible conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.05234780903832958
+  imputation_median: 8.0
+  scaling_mean: 9.886285658268797
+  scaling_std: 8.072677977524565
+- name: arm_gain_count
+  feature_type: count
+  feature_class: copy_number_aneuploidy
+  source_layer: aneuploidy_arm_level_copy_number
+  source_file: data/processed/features/aneuploidy_by_sample.tsv
+  description: Number of chromosome arms called gained in the sample.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES-derived or orthogonal purity and copy-number
+    estimates computed with compatible conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.05234780903832958
+  imputation_median: 3.0
+  scaling_mean: 4.161356729732379
+  scaling_std: 4.520692838613362
+- name: arm_loss_count
+  feature_type: count
+  feature_class: copy_number_aneuploidy
+  source_layer: aneuploidy_arm_level_copy_number
+  source_file: data/processed/features/aneuploidy_by_sample.tsv
+  description: Number of chromosome arms called lost in the sample.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES-derived or orthogonal purity and copy-number
+    estimates computed with compatible conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.05234780903832958
+  imputation_median: 4.0
+  scaling_mean: 5.672581119498089
+  scaling_std: 5.550054034707242
+- name: total_arm_alteration_count
+  feature_type: count
+  feature_class: copy_number_aneuploidy
+  source_layer: aneuploidy_arm_level_copy_number
+  source_file: data/processed/features/aneuploidy_by_sample.tsv
+  description: Total number of chromosome arms called gained or lost in the sample.
+  clinical_modality: WES
+  computable_from_clinical_wes: true
+  computable_from_clinical_wts: false
+  clinical_case_requirement: Clinical WES-derived or orthogonal purity and copy-number
+    estimates computed with compatible conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.05234780903832958
+  imputation_median: 8.0
+  scaling_mean: 9.886285658268797
+  scaling_std: 8.072677977524565
+- name: proliferation_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level proliferation expression score computed with the project
+    pathway-scoring workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.160542614529844
+  scaling_mean: -0.01000932289392923
+  scaling_std: 0.7711747046602793
+- name: immune_inflammatory_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level immune inflammatory expression score computed with the
+    project pathway-scoring workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.206500534790086
+  scaling_mean: -0.012874653477746703
+  scaling_std: 0.6302265019168252
+- name: interferon_gamma_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level interferon gamma expression score computed with the project
+    pathway-scoring workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.24370277799356
+  scaling_mean: -0.015194095363581761
+  scaling_std: 0.7329215929074641
+- name: cytotoxic_t_cell_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level cytotoxic t cell expression score computed with the project
+    pathway-scoring workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.199148939441671
+  scaling_mean: -0.012416304821576612
+  scaling_std: 0.622666635318056
+- name: stromal_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level stromal expression score computed with the project pathway-scoring
+    workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.244432563050075
+  scaling_mean: -0.016011479279992677
+  scaling_std: 0.7160840866137027
+- name: epithelial_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level epithelial expression score computed with the project
+    pathway-scoring workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.0763956426729601
+  scaling_mean: -0.006486143244748965
+  scaling_std: 0.7002999669236252
+- name: EMT_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level EMT expression score computed with the project pathway-scoring
+    workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.125908551871852
+  scaling_mean: -0.00784999892074304
+  scaling_std: 0.4628863511559534
+- name: hypoxia_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level hypoxia expression score computed with the project pathway-scoring
+    workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.207717338046092
+  scaling_mean: -0.013783711961083606
+  scaling_std: 0.6603977034474684
+- name: cell_cycle_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level cell cycle expression score computed with the project
+    pathway-scoring workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.156540719749736
+  scaling_mean: -0.009759817445429236
+  scaling_std: 0.7755230899215687
+- name: DNA_repair_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level DNA repair expression score computed with the project
+    pathway-scoring workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.142940973448067
+  scaling_mean: -0.008911916391820993
+  scaling_std: 0.6539296729961889
+- name: angiogenesis_score
+  feature_type: continuous
+  feature_class: expression_pathway_score
+  source_layer: expression_pathway
+  source_file: data/processed/features/expression_pathway_scores_by_sample.tsv
+  description: Sample-level angiogenesis expression score computed with the project
+    pathway-scoring workflow.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.21865719595759
+  scaling_mean: -0.013632582749635207
+  scaling_std: 0.7887863521540163
+- name: expression_pca_PC1
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC1 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: 0.474852008759554
+  scaling_mean: 0.029605516868059345
+  scaling_std: 3.3379740793226578
+- name: expression_pca_PC2
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC2 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: 0.65592478769114
+  scaling_mean: 0.04089483040599623
+  scaling_std: 2.559858389506434
+- name: expression_pca_PC3
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC3 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.290777182301992
+  scaling_mean: -0.01812903518714501
+  scaling_std: 2.188040642163139
+- name: expression_pca_PC4
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC4 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.0098781616955018
+  scaling_mean: -0.0006158720555179794
+  scaling_std: 1.9239809094662914
+- name: expression_pca_PC5
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC5 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: 0.199328905832747
+  scaling_mean: 0.012427525155340463
+  scaling_std: 1.886832329098579
+- name: expression_pca_PC6
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC6 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.0661584828885532
+  scaling_mean: -0.004124771602501572
+  scaling_std: 1.7440899106424474
+- name: expression_pca_PC7
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC7 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: 0.0435137544009044
+  scaling_mean: 0.0027129445935672953
+  scaling_std: 1.5789616898957757
+- name: expression_pca_PC8
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC8 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: 0.110712666124044
+  scaling_mean: 0.00690258363443691
+  scaling_std: 1.3564841796235685
+- name: expression_pca_PC9
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC9 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: 0.0925479280768621
+  scaling_mean: 0.0057700698222610015
+  scaling_std: 1.2821110733584733
+- name: expression_pca_PC10
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC10 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.110864614240509
+  scaling_mean: -0.006912057117632182
+  scaling_std: 1.1765039224140532
+- name: expression_pca_PC11
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC11 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.101485969995412
+  scaling_mean: -0.006327328391048226
+  scaling_std: 1.1022073773535639
+- name: expression_pca_PC12
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC12 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.0109325425752674
+  scaling_mean: -0.0006816093596577803
+  scaling_std: 1.0583510250397468
+- name: expression_pca_PC13
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC13 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.0368949510295076
+  scaling_mean: -0.002300283193291524
+  scaling_std: 1.0034115685109604
+- name: expression_pca_PC14
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC14 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: 0.106646399338705
+  scaling_mean: 0.006649064795551112
+  scaling_std: 0.966684415943173
+- name: expression_pca_PC15
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC15 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.07730143906615
+  scaling_mean: -0.004819499582988924
+  scaling_std: 0.956111899934894
+- name: expression_pca_PC16
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC16 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: 0.0151564429574472
+  scaling_mean: 0.0009449561534102131
+  scaling_std: 0.9108883528961298
+- name: expression_pca_PC17
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC17 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.0456142343152551
+  scaling_mean: -0.002843902855063646
+  scaling_std: 0.9044006733032282
+- name: expression_pca_PC18
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC18 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.0099033215943812
+  scaling_mean: -0.0006174406954246194
+  scaling_std: 0.8475301429891166
+- name: expression_pca_PC19
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC19 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: 0.100799431466439
+  scaling_mean: 0.006284524890957249
+  scaling_std: 0.8297576983283926
+- name: expression_pca_PC20
+  feature_type: continuous
+  feature_class: expression_pca
+  source_layer: expression_pca
+  source_file: data/processed/features/expression_pca_by_sample.tsv; fallback lineage
+    PCs from data/processed/features/expression_pathway_scores_by_sample.tsv when
+    the dedicated PCA table is unavailable
+  description: Sample coordinate on PC20 from the project expression principal-component
+    model.
+  clinical_modality: WTS
+  computable_from_clinical_wes: false
+  computable_from_clinical_wts: true
+  clinical_case_requirement: Clinical WTS/RNA-seq processed with the same gene, normalization,
+    pathway-score, and PCA conventions.
+  retained: true
+  included_in_nearest_neighbor_index: true
+  missing_fraction: 0.06234682874228017
+  imputation_median: -0.0138134058888389
+  scaling_mean: -0.0008612220512989777
+  scaling_std: 0.8134730092021082

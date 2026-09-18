@@ -1,0 +1,11 @@
+project_code_a	project_code_b	bootstrap_iterations	cutree_k	n_same_cluster	co_clustering_frequency
+BRCA	CESC	100	2	100	1
+BRCA	OV	100	2	100	1
+BRCA	UCS	100	2	100	1
+CESC	UCS	100	2	100	1
+OV	CESC	100	2	100	1
+OV	UCS	100	2	100	1
+BRCA	UCEC	100	2	0	0
+OV	UCEC	100	2	0	0
+UCEC	CESC	100	2	0	0
+UCEC	UCS	100	2	0	0

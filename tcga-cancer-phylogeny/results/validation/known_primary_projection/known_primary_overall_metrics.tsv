@@ -1,0 +1,22 @@
+metric	value	notes
+validation_scope	internal_tcga_pseudo_unknown_leave_one_out	Not external clinical validation.
+n_samples_validated	10201	Number of pseudo-unknown query samples.
+n_projects	33	Known TCGA project labels.
+n_lineage_groups	18	Configured CUP lineage groups.
+top_k	50	Neighbors summarized per query after exclusion.
+distance_metric	euclidean	Exact neighbors computed from the locked scaled matrix.
+exclude_same_patient	False	Self-neighbor exclusion is always enabled.
+top1_project_accuracy	0.5945495539652975	Exact project recovery.
+top3_project_accuracy	0.8236447407116949	True project among top three project summaries.
+top5_project_accuracy	0.8955004411332222	True project among top five project summaries.
+top1_lineage_accuracy	0.6650328399176552	Configured lineage recovery.
+top3_lineage_accuracy	0.88667777668856	True lineage among top three lineage summaries.
+top1_major_group_accuracy	0.8824625036761102	Broad major-group recovery.
+median_project_margin	0.2883033039070908	Median project top-1/top-2 score margin.
+median_lineage_margin	0.4107364676977206	Median lineage top-1/top-2 score margin.
+median_true_project_rank	1.0	Median rank of the known project.
+high_ambiguity_fraction	0.303401627291442	Fraction assigned high ambiguity.
+moderate_ambiguity_fraction	0.26820899911773355	Fraction assigned moderate ambiguity.
+low_ambiguity_fraction	0.4283893735908244	Fraction assigned low ambiguity.
+uninterpretable_due_to_missing_features_fraction	0.0	Fraction below the CUP feature-coverage threshold.
+limitations	Internal TCGA leave-one-out validation only; not external clinical validation. Queries and references share cohort, assays, preprocessing, feature engineering, and global imputation/scaling parameters. Self-neighbors are excluded, but no independent cohort, prospective specimens, clinical assay harmonization, or diagnostic calibration is evaluated.	Performance may be optimistic relative to external clinical use.

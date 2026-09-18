@@ -1,0 +1,18 @@
+qc_section	metric	value
+global	total_mutation_layer_samples	10201
+global	samples_with_ref_alt_counts	10201
+global	samples_with_purity	9516
+global	samples_with_ploidy	9516
+global	samples_with_copy_number_or_aneuploidy	9667
+global	samples_passing_minimum_filters	3017
+global	samples_selected_for_pilot_cohort	84
+global	projects_represented_in_pilot_cohort	BLCA;COAD;DLBC;HNSC;LUAD;LUSC;READ;SARC;SKCM;UCEC;UCS
+global	segment_level_cn_candidates	0
+global	limited_cn_clonal_clustering_candidates	3017
+global	limitations	TCGA is mostly single bulk tumor; candidate selection supports clonal clustering prototype, while robust branching phylogeny needs serial, relapse, metastasis, or multi-region data; segment-level CN is absent for current candidates
+excluded_by_reason	low_purity_lt_0.3	731
+excluded_by_reason	missing_copy_number_data	534
+excluded_by_reason	missing_ploidy	685
+excluded_by_reason	missing_purity	685
+excluded_by_reason	too_few_mutations_lt_100	6585
+excluded_by_reason	too_few_mutations_lt_50	131

@@ -1,0 +1,117 @@
+gene_sets:
+  proliferation:
+    description: Proliferation marker genes used for a simple expression-program score.
+    genes:
+      - MKI67
+      - TOP2A
+      - PCNA
+      - MCM2
+      - MCM5
+      - CCNB1
+      - CCNA2
+      - CDK1
+  immune_inflammatory:
+    description: Leukocyte, T-cell, cytotoxic, and inflammatory cytokine/chemokine markers.
+    genes:
+      - PTPRC
+      - CD3D
+      - CD3E
+      - CD8A
+      - CD8B
+      - GZMB
+      - PRF1
+      - IFNG
+      - CXCL9
+      - CXCL10
+  interferon_gamma:
+    description: Interferon-gamma response and antigen-presentation-associated markers.
+    genes:
+      - IFNG
+      - STAT1
+      - IRF1
+      - CXCL9
+      - CXCL10
+      - IDO1
+      - GBP1
+      - HLA-DRA
+  cytotoxic_t_cell:
+    description: Cytotoxic lymphocyte effector program.
+    genes:
+      - CD8A
+      - CD8B
+      - GZMB
+      - PRF1
+      - NKG7
+      - GNLY
+      - GZMA
+  stromal:
+    description: Fibroblast, extracellular matrix, and activated stromal markers.
+    genes:
+      - COL1A1
+      - COL1A2
+      - COL3A1
+      - ACTA2
+      - TAGLN
+      - FAP
+      - PDGFRB
+  epithelial:
+    description: Epithelial differentiation and keratin marker genes.
+    genes:
+      - EPCAM
+      - KRT8
+      - KRT18
+      - KRT19
+      - CDH1
+  EMT:
+    description: Epithelial-mesenchymal transition and invasion-associated markers.
+    genes:
+      - VIM
+      - ZEB1
+      - ZEB2
+      - SNAI1
+      - SNAI2
+      - TWIST1
+      - FN1
+      - ITGA5
+  hypoxia:
+    description: Hypoxia and glycolytic adaptation markers.
+    genes:
+      - VEGFA
+      - CA9
+      - SLC2A1
+      - LDHA
+      - PGK1
+      - ENO1
+  cell_cycle:
+    description: Core cell-cycle and DNA replication markers.
+    genes:
+      - MKI67
+      - TOP2A
+      - PCNA
+      - MCM2
+      - MCM5
+      - CCNB1
+      - CCNA2
+      - CDK1
+      - BUB1
+      - CDC20
+  DNA_repair:
+    description: DNA damage response and homologous recombination repair markers.
+    genes:
+      - BRCA1
+      - BRCA2
+      - RAD51
+      - ATM
+      - ATR
+      - CHEK1
+      - CHEK2
+      - FANCD2
+  angiogenesis:
+    description: Angiogenesis and endothelial activation markers.
+    genes:
+      - VEGFA
+      - KDR
+      - FLT1
+      - ANGPT2
+      - TEK
+      - PECAM1

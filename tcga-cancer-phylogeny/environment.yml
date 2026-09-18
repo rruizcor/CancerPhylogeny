@@ -1,0 +1,43 @@
+name: tcga-cancer-phylogeny
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pip
+  - snakemake-minimal
+  - quarto
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - pyarrow
+  - pyyaml
+  - tqdm
+  - r-base>=4.3
+  - r-tidyverse
+  - r-data.table
+  - r-arrow
+  - r-jsonlite
+  - r-yaml
+  - r-here
+  - r-logger
+  - r-glue
+  - r-janitor
+  - r-cluster
+  - r-vegan
+  - r-ape
+  - r-phytools
+  - r-phangorn
+  - r-ggplot2
+  - r-ggrepel
+  - r-patchwork
+  - r-cowplot
+  - r-pheatmap
+  - bioconductor-tcgabiolinks
+  - bioconductor-complexheatmap
+  - bioconductor-ggtree
+  - bioconductor-summarizedexperiment
+  - bioconductor-genomicranges
+  - pip:
+      - pyclone-vi

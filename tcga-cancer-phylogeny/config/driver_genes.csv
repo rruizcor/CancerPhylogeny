@@ -1,0 +1,30 @@
+gene,feature_group,rationale
+TP53,tumor_suppressor,Common pan-cancer tumor suppressor and chromosomal instability-associated alteration.
+KRAS,oncogene,Canonical RAS pathway driver in GI and lung adenocarcinoma contexts.
+BRAF,oncogene,MAPK pathway driver in melanoma; thyroid carcinoma; colorectal cancer; and other tumors.
+IDH1,oncometabolite,Glioma and cholangiocarcinoma-associated oncometabolite driver.
+IDH2,oncometabolite,Myeloid and glioma-relevant oncometabolite driver.
+PIK3CA,oncogene,PI3K pathway driver across breast; gynecologic; squamous; and other carcinomas.
+APC,tumor_suppressor,"WNT pathway driver, especially colorectal lineage."
+PTEN,tumor_suppressor,"PI3K pathway tumor suppressor, common in endometrial and prostate cancers."
+NF1,tumor_suppressor,RAS pathway negative regulator relevant in melanoma; glioma; and other tumors.
+BAP1,tumor_suppressor,Chromatin-associated tumor suppressor in uveal melanoma; mesothelioma; kidney cancer; and others.
+VHL,tumor_suppressor,Renal clear cell carcinoma-associated driver.
+RB1,tumor_suppressor,Cell-cycle tumor suppressor across multiple cancer types.
+CDKN2A,tumor_suppressor,Cell-cycle tumor suppressor commonly deleted or mutated.
+SMAD4,tumor_suppressor,TGF-beta pathway driver in pancreatic and GI cancers.
+ARID1A,chromatin,SWI/SNF chromatin remodeler altered across gynecologic and GI cancers.
+TERT,regulatory,Promoter and regulatory alterations are common in several TCGA cancer types when available.
+EGFR,oncogene,RTK driver in glioma and lung adenocarcinoma.
+ERBB2,oncogene,RTK driver in breast; gastric; and other carcinomas.
+ALK,oncogene,RTK fusion or mutation driver in selected cancers when detectable.
+MET,oncogene,RTK pathway driver in kidney; lung; and other tumors.
+MYC,oncogene,Amplification/expression-associated oncogene; mutation prevalence alone may be insufficient.
+CTNNB1,oncogene,WNT pathway driver in liver; endometrial; and other tumors.
+POLE,dna_repair,Exonuclease-domain alterations can drive ultramutated phenotypes.
+MSH2,dna_repair,MMR gene; alteration may indicate mismatch repair deficiency.
+MSH6,dna_repair,MMR gene; alteration may indicate mismatch repair deficiency.
+MLH1,dna_repair,MMR gene; alteration or silencing may indicate mismatch repair deficiency.
+PMS2,dna_repair,MMR gene; alteration may indicate mismatch repair deficiency.
+BRCA1,dna_repair,Homologous recombination repair gene.
+BRCA2,dna_repair,Homologous recombination repair gene.

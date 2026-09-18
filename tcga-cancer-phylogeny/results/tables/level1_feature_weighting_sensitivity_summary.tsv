@@ -1,0 +1,6 @@
+weighting_scenario	adjusted_rand_index_vs_unweighted_gower_k6	projects_changing_cluster	n_projects_changing_cluster	dlbc_status	skcm_status	ucec_status	ucs_status	major_groups_stable
+unweighted_all_features	1	none	0	singleton	singleton	singleton	singleton	TRUE
+equal_weight_mutation_copy_number_expression	0.698535852834439	CHOL;DLBC;GBM;KICH;KIRC;KIRP;LAML;LGG;LIHC;MESO;PAAD;PCPG;PRAD;SARC;SKCM;THCA;THYM;UCEC;UCS;UVM	20	singleton	grouped	singleton	grouped	FALSE
+mutation_down_weighted	0.716633954857704	LAML;SKCM;TGCT;THYM;UCEC;UCS	6	singleton	singleton	singleton	grouped	FALSE
+copy_number_down_weighted	0.888378835467504	PAAD;SKCM;UCEC;UCS	4	singleton	singleton	singleton	grouped	TRUE
+expression_down_weighted	0.789012550319678	BRCA;OV	2	singleton	singleton	singleton	singleton	TRUE

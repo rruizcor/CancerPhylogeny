@@ -1,0 +1,23 @@
+item_type	item_number	title	source_file	included_in_preprint	notes
+figure	1	Conceptual overview of the multilevel framework	pending	TRUE	Placeholder included; conceptual figure remains to be created.
+figure	2	Level 1 pan-cancer Gower molecular similarity tree	results/figures/level1_pan_cancer_gower_tree.pdf	TRUE	Existing Level 1 figure.
+figure	3	Level 1 pan-cancer molecular trait heatmap	results/figures/level1_pan_cancer_tree_with_trait_heatmap.pdf	TRUE	Existing Level 1 figure.
+figure	4	Level 1 feature PCA	results/figures/level1_pan_cancer_feature_pca.pdf	TRUE	Existing Level 1 figure.
+figure	5	Level 2 carcinoma-all Gower molecular similarity tree	results/figures/level2_carcinoma_all_gower_tree.pdf	TRUE	Representative Level 2 group-specific tree.
+figure	6	Level 3 limited VAF clustering summary	results/figures/level3_limited_vaf_complexity_heatmap.pdf;results/figures/level3_limited_vaf_cluster_vaf_density_by_sample.pdf	TRUE	Existing limited-VAF figures used as a composite figure reference.
+figure	7	TCGA sample reference PCA by project	results/figures/tcga_sample_reference_pca_by_project.pdf	TRUE	Existing reference-atlas PCA figure.
+figure	8	TCGA sample reference PCA by major cancer group	results/figures/tcga_sample_reference_pca_by_major_group.pdf	TRUE	Existing reference-atlas PCA figure.
+figure	9	Synthetic clinical query PCA projection by TCGA project	results/clinical_projection/example_cup_case/clinical_tcga_pca_projection_by_project.pdf	TRUE	Synthetic example projection figure.
+figure	10	Synthetic clinical query nearest-neighbor project composition	results/clinical_projection/example_cup_case/clinical_nearest_neighbor_barplot.pdf	TRUE	Synthetic example nearest-neighbor figure.
+figure	11	CUP top-project similarity summary	results/clinical_projection/example_cup_case/cup_interpretation/cup_top_project_similarity_barplot.pdf	TRUE	Synthetic CUP interpretation figure.
+figure	12	CUP major-group similarity summary	results/clinical_projection/example_cup_case/cup_interpretation/cup_major_group_similarity_barplot.pdf	TRUE	Synthetic CUP interpretation figure.
+figure	13	CUP ambiguity summary	results/clinical_projection/example_cup_case/cup_interpretation/cup_ambiguity_summary.pdf	TRUE	Synthetic CUP interpretation figure.
+figure	14	CUP heuristic evidence map	results/clinical_projection/example_cup_case/cup_interpretation/cup_evidence_heatmap.pdf	TRUE	Synthetic CUP evidence figure; values are heuristic, not probabilities.
+table	1	Project data layers and sample counts	results/tables/integrated_project_summary.tsv;results/tables/level3_mutation_local_cn_annotation_qc_summary.tsv	TRUE	Markdown table generated in manuscript.
+table	2	TCGA reference atlas feature composition	results/reference_atlas/tcga_reference_feature_definitions.yaml;results/tables/tcga_sample_reference_atlas_qc_summary.tsv	TRUE	Markdown table generated in manuscript.
+table	3	Synthetic clinical projection example	results/clinical_projection/example_cup_case/clinical_projection_qc_summary.tsv;results/clinical_projection/example_cup_case/tcga_nearest_project_summary.tsv	TRUE	Markdown table generated in manuscript.
+table	4	Synthetic CUP interpretation example	results/clinical_projection/example_cup_case/cup_interpretation/cup_ranked_lineage_interpretation.tsv;results/clinical_projection/example_cup_case/cup_interpretation/cup_ambiguity_metrics.tsv;results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_evidence_table.tsv	TRUE	Markdown table generated in manuscript.
+table	5	PyClone-VI and PhyloWGS readiness	results/tables/level3_allele_specific_cn_readiness_qc_summary.tsv	TRUE	Markdown table generated in manuscript.
+table	6	Level 1 and Level 2 tree outputs	results/tables/integrated_project_summary.tsv;results/tables/level2_group_definitions.tsv	TRUE	Markdown table generated in manuscript.
+table	7	Level 3 clonal-preparation summary	results/tables/level3_candidate_selection_qc_summary.tsv;results/tables/level3_segment_cn_qc_summary.tsv;results/tables/level3_mutation_local_cn_annotation_qc_summary.tsv;results/tables/level3_clonal_input_preparation_qc_summary.tsv;results/tables/level3_limited_vaf_clustering_qc_summary.tsv	TRUE	Markdown table generated in manuscript.
+table	8	Limited VAF clustering interpretation classes	results/tables/level3_limited_vaf_clustering_qc_summary.tsv	TRUE	Markdown table generated in manuscript.

@@ -1,0 +1,120 @@
+level	output_type	file_path	description	exists	notes
+integrated	report	results/reports/integrated_tcga_cancer_phylogeny_report.md	Main integrated project report	True	
+integrated	report	results/reports/integrated_tcga_cancer_phylogeny_executive_summary.md	Executive summary for collaborators	True	
+integrated	report	results/reports/integrated_tcga_cancer_phylogeny_methods.md	Concise methods summary	True	
+integrated	report	results/reports/integrated_tcga_cancer_phylogeny_limitations_next_steps.md	Limitations and next recommended development steps	True	
+integrated	report	results/reports/integrated_tcga_cancer_phylogeny_report.html	Optional HTML rendering of main report	True	
+integrated	table	results/tables/integrated_project_summary.tsv	Machine-readable integrated project summary	True	
+integrated	table	results/tables/integrated_project_outputs_index.tsv	Machine-readable project output index	True	
+level1	table	results/tables/level1_feature_matrix.tsv	Level 1 project feature matrix	True	
+level1	table	results/tables/level1_tree_qc_summary.tsv	Level 1 tree QC summary	True	
+level1	table	results/tables/level1_bootstrap_cluster_stability.tsv	Level 1 feature-bootstrap co-clustering stability	True	
+level1	tree	results/trees/level1_pan_cancer_gower_hclust_tree.nwk	Level 1 Gower average-linkage Newick tree	True	
+level1	tree	results/trees/level1_pan_cancer_correlation_hclust_tree.nwk	Level 1 correlation average-linkage Newick tree	True	
+level2	table	results/tables/level2_group_definitions.tsv	Level 2 group definitions	True	
+level2	table	results/tables/level2_tree_qc_summary.tsv	Level 2 tree QC summary	True	
+level2	report	results/reports/level2_interpretation_summary.md	Level 2 interpretation summary	True	
+level3	table	results/tables/level3_candidate_selection_qc_summary.tsv	Level 3 candidate-selection QC summary	True	
+level3	table	results/tables/level3_candidate_summary_by_project.tsv	Level 3 candidate summary by project	True	
+level3	table	results/tables/level3_pilot_cohort.tsv	Level 3 pilot cohort	True	
+level3	table	results/tables/level3_segment_cn_qc_summary.tsv	Level 3 segment-level copy-number QC summary	True	
+level3	table	results/tables/level3_mutation_local_cn_annotation_qc_summary.tsv	Level 3 mutation local-CN annotation QC summary	True	
+level3	table	results/tables/level3_clonal_input_preparation_qc_summary.tsv	Level 3 clonal-input preparation QC summary	True	
+level3	table	results/tables/level3_limited_vaf_clustering_qc_summary.tsv	Level 3 limited VAF clustering QC summary	True	
+level3	table	results/tables/level3_limited_vaf_clonal_complexity_by_sample.tsv	Level 3 limited VAF complexity by sample	True	
+level3	table	results/tables/level3_limited_vaf_clonal_complexity_by_project.tsv	Level 3 limited VAF complexity by project	True	
+translational	table	results/tables/tcga_sample_reference_atlas_qc_summary.tsv	TCGA sample-level reference atlas QC summary	True	
+translational	artifact	results/reference_atlas/tcga_reference_feature_definitions.yaml	Locked reference-atlas feature definitions used by clinical projection	True	
+translational	artifact	results/reference_atlas/tcga_reference_scaler_parameters.json	Locked reference-atlas imputation and scaling parameters	True	
+level3_readiness	table	results/tables/level3_allele_specific_cn_readiness_qc_summary.tsv	Allele-specific CN readiness QC summary	True	
+level3_readiness	table	results/tables/level3_allele_specific_cn_availability_by_sample.tsv	Allele-specific CN availability by pilot sample	True	
+level3_readiness	table	results/tables/level3_mutation_to_allele_specific_cn_readiness.tsv	Mutation overlap readiness for allele-specific CN	True	
+level3_readiness	table	results/tables/level3_allele_specific_cn_external_inference_manifest.tsv	External allele-specific CN inference manifest	True	
+level3_readiness	report	results/reports/level3_allele_specific_cn_and_pyclone_plan.md	Allele-specific CN acquisition and PyClone-VI planning report	True	
+translational	matrix	results/reference_atlas/tcga_sample_reference_matrix.tsv.gz	Observed pre-imputation TCGA sample reference matrix	True	
+translational	table	results/reference_atlas/tcga_sample_reference_metadata.tsv	TCGA sample reference metadata	True	
+translational	matrix	results/reference_atlas/tcga_sample_reference_scaled_matrix.tsv.gz	Median-imputed and scaled TCGA sample reference matrix	True	
+translational	table	results/reference_atlas/tcga_reference_feature_missingness.tsv	Reference-atlas feature missingness	True	
+translational	table	results/reference_atlas/tcga_reference_pca_coordinates.tsv	Reference-atlas PCA coordinates	True	
+translational	model	results/reference_atlas/tcga_reference_pca_model.pkl	Locked reference PCA model	True	
+translational	table	results/reference_atlas/tcga_reference_pca_variance.tsv	Reference PCA explained variance	True	
+translational	model	results/reference_atlas/tcga_reference_nearest_neighbor_index.pkl	Default nearest-neighbor index	True	
+translational	artifact	results/reference_atlas/tcga_reference_nearest_neighbor_metadata.json	Nearest-neighbor index metadata and feature contract	True	
+level1	figure	results/figures/level1_bootstrap_coclustering_heatmap.pdf	Level 1 figure: level1_bootstrap_coclustering_heatmap.pdf	True	auto-indexed existing figure
+level1	figure	results/figures/level1_cluster_trait_summary_heatmap.pdf	Level 1 figure: level1_cluster_trait_summary_heatmap.pdf	True	auto-indexed existing figure
+level1	figure	results/figures/level1_feature_class_sensitivity_heatmap.pdf	Level 1 figure: level1_feature_class_sensitivity_heatmap.pdf	True	auto-indexed existing figure
+level1	figure	results/figures/level1_feature_driver_barplot.pdf	Level 1 figure: level1_feature_driver_barplot.pdf	True	auto-indexed existing figure
+level1	figure	results/figures/level1_pan_cancer_correlation_tree.pdf	Level 1 figure: level1_pan_cancer_correlation_tree.pdf	True	auto-indexed existing figure
+level1	figure	results/figures/level1_pan_cancer_feature_pca.pdf	Level 1 figure: level1_pan_cancer_feature_pca.pdf	True	auto-indexed existing figure
+level1	figure	results/figures/level1_pan_cancer_gower_tree.pdf	Level 1 figure: level1_pan_cancer_gower_tree.pdf	True	auto-indexed existing figure
+level1	figure	results/figures/level1_pan_cancer_tree_with_trait_heatmap.pdf	Level 1 figure: level1_pan_cancer_tree_with_trait_heatmap.pdf	True	auto-indexed existing figure
+level1	figure	results/figures/level1_weighting_sensitivity_pca_or_mds.pdf	Level 1 figure: level1_weighting_sensitivity_pca_or_mds.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_carcinoma_all_correlation_tree.pdf	Level 2 figure: level2_carcinoma_all_correlation_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_carcinoma_all_feature_pca.pdf	Level 2 figure: level2_carcinoma_all_feature_pca.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_carcinoma_all_gower_tree.pdf	Level 2 figure: level2_carcinoma_all_gower_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_carcinoma_all_trait_heatmap.pdf	Level 2 figure: level2_carcinoma_all_trait_heatmap.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_gi_pancancreatobiliary_correlation_tree.pdf	Level 2 figure: level2_gi_pancancreatobiliary_correlation_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_gi_pancancreatobiliary_feature_pca.pdf	Level 2 figure: level2_gi_pancancreatobiliary_feature_pca.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_gi_pancancreatobiliary_gower_tree.pdf	Level 2 figure: level2_gi_pancancreatobiliary_gower_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_gi_pancancreatobiliary_trait_heatmap.pdf	Level 2 figure: level2_gi_pancancreatobiliary_trait_heatmap.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_gynecologic_breast_correlation_tree.pdf	Level 2 figure: level2_gynecologic_breast_correlation_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_gynecologic_breast_feature_pca.pdf	Level 2 figure: level2_gynecologic_breast_feature_pca.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_gynecologic_breast_gower_tree.pdf	Level 2 figure: level2_gynecologic_breast_gower_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_gynecologic_breast_trait_heatmap.pdf	Level 2 figure: level2_gynecologic_breast_trait_heatmap.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_kidney_correlation_tree.pdf	Level 2 figure: level2_kidney_correlation_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_kidney_feature_pca.pdf	Level 2 figure: level2_kidney_feature_pca.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_kidney_gower_tree.pdf	Level 2 figure: level2_kidney_gower_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_kidney_trait_heatmap.pdf	Level 2 figure: level2_kidney_trait_heatmap.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_pan_squamous_correlation_tree.pdf	Level 2 figure: level2_pan_squamous_correlation_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_pan_squamous_feature_pca.pdf	Level 2 figure: level2_pan_squamous_feature_pca.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_pan_squamous_gower_tree.pdf	Level 2 figure: level2_pan_squamous_gower_tree.pdf	True	auto-indexed existing figure
+level2	figure	results/figures/level2_pan_squamous_trait_heatmap.pdf	Level 2 figure: level2_pan_squamous_trait_heatmap.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_allele_specific_cn_missing_inputs.pdf	Level 3 figure: level3_allele_specific_cn_missing_inputs.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_allele_specific_cn_readiness_by_project.pdf	Level 3 figure: level3_allele_specific_cn_readiness_by_project.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_candidate_counts_by_project.pdf	Level 3 figure: level3_candidate_counts_by_project.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_candidate_mutation_count_vs_purity.pdf	Level 3 figure: level3_candidate_mutation_count_vs_purity.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_candidate_score_by_project.pdf	Level 3 figure: level3_candidate_score_by_project.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_candidate_upgrade_status.pdf	Level 3 figure: level3_candidate_upgrade_status.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_copy_neutral_candidate_counts_by_project.pdf	Level 3 figure: level3_copy_neutral_candidate_counts_by_project.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_copy_neutral_candidate_counts_by_sample.pdf	Level 3 figure: level3_copy_neutral_candidate_counts_by_sample.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_limited_vaf_cluster_counts_by_project.pdf	Level 3 figure: level3_limited_vaf_cluster_counts_by_project.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_limited_vaf_cluster_vaf_density_by_sample.pdf	Level 3 figure: level3_limited_vaf_cluster_vaf_density_by_sample.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_limited_vaf_complexity_heatmap.pdf	Level 3 figure: level3_limited_vaf_complexity_heatmap.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_limited_vaf_example_samples.pdf	Level 3 figure: level3_limited_vaf_example_samples.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_mutation_cn_annotation_coverage_by_sample.pdf	Level 3 figure: level3_mutation_cn_annotation_coverage_by_sample.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_mutation_depth_distribution.pdf	Level 3 figure: level3_mutation_depth_distribution.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_mutation_vaf_vs_local_segment_mean.pdf	Level 3 figure: level3_mutation_vaf_vs_local_segment_mean.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_pilot_cohort_overview.pdf	Level 3 figure: level3_pilot_cohort_overview.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_readiness_class_by_project.pdf	Level 3 figure: level3_readiness_class_by_project.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_segment_cn_availability_by_project.pdf	Level 3 figure: level3_segment_cn_availability_by_project.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_segment_cn_pilot_coverage.pdf	Level 3 figure: level3_segment_cn_pilot_coverage.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_segment_cn_upgrade_by_project.pdf	Level 3 figure: level3_segment_cn_upgrade_by_project.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_segment_count_distribution.pdf	Level 3 figure: level3_segment_count_distribution.pdf	True	auto-indexed existing figure
+level3	figure	results/figures/level3_vaf_distribution_copy_neutral_candidates.pdf	Level 3 figure: level3_vaf_distribution_copy_neutral_candidates.pdf	True	auto-indexed existing figure
+translational	figure	results/figures/tcga_sample_reference_feature_missingness.pdf	Reference atlas figure: tcga_sample_reference_feature_missingness.pdf	True	auto-indexed existing figure
+translational	figure	results/figures/tcga_sample_reference_pca_by_major_group.pdf	Reference atlas figure: tcga_sample_reference_pca_by_major_group.pdf	True	auto-indexed existing figure
+translational	figure	results/figures/tcga_sample_reference_pca_by_project.pdf	Reference atlas figure: tcga_sample_reference_pca_by_project.pdf	True	auto-indexed existing figure
+translational	figure	results/figures/tcga_sample_reference_samples_by_project.pdf	Reference atlas figure: tcga_sample_reference_samples_by_project.pdf	True	auto-indexed existing figure
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_feature_missingness.pdf	Synthetic clinical projection output: clinical_feature_missingness.pdf	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_feature_missingness.tsv	Synthetic clinical projection output: clinical_feature_missingness.tsv	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_feature_vector.tsv	Synthetic clinical projection output: clinical_feature_vector.tsv	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_feature_vector_scaled.tsv	Synthetic clinical projection output: clinical_feature_vector_scaled.tsv	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_nearest_neighbor_barplot.pdf	Synthetic clinical projection output: clinical_nearest_neighbor_barplot.pdf	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_projection_qc_summary.tsv	Synthetic clinical projection output: clinical_projection_qc_summary.tsv	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_tcga_pca_projection.tsv	Synthetic clinical projection output: clinical_tcga_pca_projection.tsv	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_tcga_pca_projection_by_major_group.pdf	Synthetic clinical projection output: clinical_tcga_pca_projection_by_major_group.pdf	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_tcga_pca_projection_by_project.pdf	Synthetic clinical projection output: clinical_tcga_pca_projection_by_project.pdf	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/clinical_tcga_projection_report.md	Synthetic clinical projection output: clinical_tcga_projection_report.md	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/tcga_nearest_major_group_summary.tsv	Synthetic clinical projection output: tcga_nearest_major_group_summary.tsv	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/tcga_nearest_neighbors.tsv	Synthetic clinical projection output: tcga_nearest_neighbors.tsv	True	auto-indexed existing output
+clinical_projection	clinical_projection_output	results/clinical_projection/example_cup_case/tcga_nearest_project_summary.tsv	Synthetic clinical projection output: tcga_nearest_project_summary.tsv	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_ambiguity_metrics.tsv	Synthetic CUP interpretation output: cup_ambiguity_metrics.tsv	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_ambiguity_summary.pdf	Synthetic CUP interpretation output: cup_ambiguity_summary.pdf	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_differential_diagnosis_constrained_summary.tsv	Synthetic CUP interpretation output: cup_differential_diagnosis_constrained_summary.tsv	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_evidence_heatmap.pdf	Synthetic CUP interpretation output: cup_evidence_heatmap.pdf	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_major_group_similarity_barplot.pdf	Synthetic CUP interpretation output: cup_major_group_similarity_barplot.pdf	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_evidence_table.tsv	Synthetic CUP interpretation output: cup_molecular_evidence_table.tsv	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_interpretation_report.md	Synthetic CUP interpretation output: cup_molecular_interpretation_report.md	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_pathologic_concordance.tsv	Synthetic CUP interpretation output: cup_molecular_pathologic_concordance.tsv	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_ranked_lineage_interpretation.tsv	Synthetic CUP interpretation output: cup_ranked_lineage_interpretation.tsv	True	auto-indexed existing output
+cup_interpretation	cup_interpretation_output	results/clinical_projection/example_cup_case/cup_interpretation/cup_top_project_similarity_barplot.pdf	Synthetic CUP interpretation output: cup_top_project_similarity_barplot.pdf	True	auto-indexed existing output

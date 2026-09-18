@@ -1,0 +1,2 @@
+case_id	query_sample_id	submitted_diagnosis	top_lineage_or_project_group	top_major_cancer_group	concordance_class	rationale	caveats
+example_cup_case	SYNTHETIC-CUP-001	Synthetic carcinoma of unknown primary	lower_GI	Carcinoma	not_assessable	The submitted diagnosis does not specify a tissue lineage for comparison.	Heuristic text comparison only; definitive concordance requires morphology, immunophenotype, imaging, specimen context, and expert pathologic review.

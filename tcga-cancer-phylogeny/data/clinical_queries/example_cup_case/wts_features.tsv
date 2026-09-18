@@ -1,0 +1,2 @@
+sample_id	proliferation_score	immune_inflammatory_score	interferon_gamma_score	cytotoxic_t_cell_score	stromal_score	epithelial_score	EMT_score	hypoxia_score	cell_cycle_score	DNA_repair_score	angiogenesis_score	fusion_flag_synthetic
+SYNTHETIC-CUP-001	0.55	-0.15	-0.10	-0.20	0.25	0.65	0.10	0.20	0.45	0.15	0.05	0

@@ -1,0 +1,11 @@
+project_code_a	project_code_b	bootstrap_iterations	cutree_k	n_same_cluster	co_clustering_frequency
+HNSC	CESC	100	2	84	0.84
+LUSC	HNSC	100	2	73	0.73
+HNSC	ESCA	100	2	71	0.71
+LUSC	ESCA	100	2	68	0.68
+CESC	ESCA	100	2	57	0.57
+LUSC	CESC	100	2	57	0.57
+ESCA	BLCA	100	2	44	0.44
+LUSC	BLCA	100	2	42	0.42
+HNSC	BLCA	100	2	15	0.15
+CESC	BLCA	100	2	1	0.01

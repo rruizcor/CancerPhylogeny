@@ -1,0 +1,12 @@
+project_code	n_samples	median_n_input_mutations	median_n_clusters	median_dominant_cluster_fraction	median_subclonal_mutation_fraction	median_vaf_entropy	interpretation_summary
+BLCA	3	1804.0	3.0	0.7439024390243902	0.9101995565410199	0.5461566647838692	oligoclonal_like:2;multicluster_subclonal_like:1
+COAD	3	1820.0	3.0	0.8346153846153846	0.15110509697789806	0.6125989148827666	predominantly_clonal_like:1;oligoclonal_like:1;multicluster_subclonal_like:1
+DLBC	1	166.0	3.0	0.8072289156626506	0.10240963855421686	0.5674961021708198	oligoclonal_like:1
+HNSC	3	644.0	2.0	0.6556473829201102	0.2865013774104683	0.7279812083214137	oligoclonal_like:1;predominantly_clonal_like:1;multicluster_subclonal_like:1
+LUAD	3	467.0	3.0	0.841541755888651	0.7982646420824295	0.6213964646589998	oligoclonal_like:2;multicluster_subclonal_like:1
+LUSC	3	528.0	3.0	0.7916666666666666	0.12878787878787878	0.5919019360991772	oligoclonal_like:2;predominantly_clonal_like:1
+READ	3	8332.0	5.0	0.5299698145752479	0.18464128706388552	0.794828995005762	multicluster_subclonal_like:3
+SARC	3	389.0	2.0	0.5564853556485355	0.910025706940874	0.8130843653368376	multicluster_subclonal_like:2;predominantly_clonal_like:1
+SKCM	3	1148.0	4.0	0.6184668989547039	0.6903096903096904	0.7251696372461127	multicluster_subclonal_like:2;oligoclonal_like:1
+UCEC	3	11110.0	4.0	0.6951483420593368	0.3027002700270027	0.7242081777297072	multicluster_subclonal_like:2;oligoclonal_like:1
+UCS	2	1930.5	3.0	0.6667246592200297	0.12823726227967744	0.6303312341563244	multicluster_subclonal_like:1;predominantly_clonal_like:1

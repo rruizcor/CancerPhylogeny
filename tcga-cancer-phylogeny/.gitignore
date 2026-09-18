@@ -1,0 +1,19 @@
+# Local caches, credentials, and operating-system files
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.snakemake/
+.quarto/
+.Rhistory
+.RData
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+# Source downloads exceeding GitHub's per-file limit; see SOURCE_DATA_INVENTORY.tsv
+/data/raw/expression/EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv
+/data/raw/mc3/mc3.maf.gz
+/mc3.v0.2.8.PUBLIC.maf
+/mc3.v0.2.8.PUBLIC.maf.gz

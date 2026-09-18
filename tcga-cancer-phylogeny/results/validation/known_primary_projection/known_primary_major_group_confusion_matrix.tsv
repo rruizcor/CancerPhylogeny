@@ -1,0 +1,10 @@
+true_major_cancer_group	CNS/glial	Carcinoma	Germ cell	Hematolymphoid	Melanocytic	Mesothelial	Neuroendocrine/adrenal/paraganglioma	Other or mixed	Sarcoma
+CNS/glial	749	159	0	0	3	0	18	0	0
+Carcinoma	156	7428	0	5	4	0	12	0	14
+Germ cell	2	38	108	0	0	0	0	0	3
+Hematolymphoid	18	39	1	114	5	0	0	0	0
+Melanocytic	21	285	0	0	241	0	1	0	0
+Mesothelial	0	80	0	0	1	0	0	0	1
+Neuroendocrine/adrenal/paraganglioma	5	103	0	0	0	0	167	0	1
+Other or mixed	3	94	0	0	0	0	5	77	1
+Sarcoma	2	110	1	0	4	0	4	0	118

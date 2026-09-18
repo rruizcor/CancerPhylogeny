@@ -1,0 +1,67 @@
+missingness:
+  max_feature_missing_fraction: 0.30
+  min_samples_per_project: 10
+scaling:
+  continuous: z_score
+  prevalence: proportion_0_1
+distances:
+  level1:
+    - gower
+    - correlation
+    - cosine
+  level2:
+    - gower
+    - correlation
+trees:
+  methods:
+    - hierarchical_average
+    - neighbor_joining
+  bootstrap:
+    enabled: true
+    n_replicates: 200
+    resample: features
+feature_categories:
+  mutation:
+    description: Driver mutation prevalence and tumor mutational burden.
+    sample_outputs:
+      - data/processed/features/tmb_by_sample.tsv
+    project_outputs:
+      - data/processed/features/mutation_prevalence_by_project.tsv
+  copy_number:
+    description: Aneuploidy, fraction genome altered, arm-level CNA burden, whole-genome doubling where available.
+    sample_outputs:
+      - data/processed/features/aneuploidy_by_sample.tsv
+      - data/processed/features/purity_ploidy_by_sample.tsv
+    project_outputs:
+      - data/processed/features/aneuploidy_by_project.tsv
+  expression:
+    description: Pathway, immune, stromal, proliferation, EMT, and lineage-associated expression scores.
+    sample_outputs:
+      - data/processed/features/expression_pathway_scores_by_sample.tsv
+    project_outputs:
+      - data/processed/features/expression_pathway_scores_by_project.tsv
+  histogenetic_group:
+    description: Manual broad cancer group and more specific lineage labels from config/cancer_group_map.csv.
+level2_tests:
+  carcinoma_expected_groupings:
+    pan_squamous:
+      projects: [CESC, ESCA, HNSC, LUSC]
+      note: CESC and ESCA are mixed cohorts; subtype-aware analyses are preferred when metadata permits.
+    pan_gi:
+      projects: [CHOL, COAD, ESCA, LIHC, PAAD, READ, STAD]
+    pan_kidney:
+      projects: [KICH, KIRC, KIRP]
+    pan_gynecologic:
+      projects: [CESC, OV, UCEC, UCS]
+    lung:
+      projects: [LUAD, LUSC]
+clonal_pilot_selection:
+  project_priority: [SKCM, LUAD, LUSC, UCEC, COAD]
+  min_high_confidence_mutations: 100
+  min_median_depth: 30
+  min_purity: 0.40
+  require_ref_alt_counts: true
+  require_copy_number_segments: true
+  warnings:
+    - Single-bulk TCGA samples often support clonal clustering better than confident branching phylogenies.
+    - Branching trees should be treated as candidate structures unless multi-region, longitudinal, or orthogonal validation data are available.

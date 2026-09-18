@@ -1,0 +1,2 @@
+case_id	sample_id	specimen_type	submitted_diagnosis	differential_diagnosis	tumor_purity	notes
+example_cup_case	SYNTHETIC-CUP-001	synthetic_core_biopsy	Synthetic carcinoma of unknown primary	Synthetic gastrointestinal vs pancreatobiliary vs lung differential	0.68	Artificial demonstration data only; no real patient or specimen data.

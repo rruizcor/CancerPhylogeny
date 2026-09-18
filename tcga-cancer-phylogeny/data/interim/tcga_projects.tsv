@@ -1,0 +1,34 @@
+project_id	project_code	disease_type	primary_site	name	program	dbgap_accession_number	released	state	case_count	file_count
+TCGA-ACC	ACC	Adenomas and Adenocarcinomas	Adrenal gland	Adrenocortical Carcinoma	TCGA	NA	TRUE	open	92	5789
+TCGA-BLCA	BLCA	Epithelial Neoplasms, NOS;Squamous Cell Neoplasms;Transitional Cell Papillomas and Carcinomas;Adenomas and Adenocarcinomas	Bladder	Bladder Urothelial Carcinoma	TCGA	NA	TRUE	open	412	31338
+TCGA-BRCA	BRCA	Adnexal and Skin Appendage Neoplasms;Adenomas and Adenocarcinomas;Ductal and Lobular Neoplasms;Cystic, Mucinous and Serous Neoplasms;Complex Epithelial Neoplasms;Fibroepithelial Neoplasms;Squamous Cell Neoplasms;Epithelial Neoplasms, NOS;Basal Cell Neoplasms	Breast	Breast Invasive Carcinoma	TCGA	NA	TRUE	open	1098	70774
+TCGA-CESC	CESC	Squamous Cell Neoplasms;Cystic, Mucinous and Serous Neoplasms;Complex Epithelial Neoplasms;Adenomas and Adenocarcinomas	Cervix uteri;Ovary	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	TCGA	NA	TRUE	open	307	19315
+TCGA-CHOL	CHOL	Adenomas and Adenocarcinomas	Liver and intrahepatic bile ducts;Other and unspecified parts of biliary tract;Pancreas	Cholangiocarcinoma	TCGA	NA	TRUE	open	51	3171
+TCGA-COAD	COAD	Cystic, Mucinous and Serous Neoplasms;Complex Epithelial Neoplasms;Epithelial Neoplasms, NOS;Adenomas and Adenocarcinomas	Colon;Rectosigmoid junction	Colon Adenocarcinoma	TCGA	NA	TRUE	open	461	28900
+TCGA-DLBC	DLBC	Mature B-Cell Lymphomas;Not Reported	Colon;Retroperitoneum and peritoneum;Heart, mediastinum, and pleura;Breast;Bones, joints and articular cartilage of other and unspecified sites;Lymph nodes;Small intestine;Stomach;Testis;Brain;Connective, subcutaneous and other soft tissues;Thyroid gland;Hematopoietic and reticuloendothelial systems;Other and unspecified major salivary glands	Lymphoid Neoplasm Diffuse Large B-cell Lymphoma	TCGA	NA	TRUE	open	58	3141
+TCGA-ESCA	ESCA	Squamous Cell Neoplasms;Cystic, Mucinous and Serous Neoplasms;Adenomas and Adenocarcinomas	Esophagus;Stomach	Esophageal Carcinoma	TCGA	NA	TRUE	open	185	11120
+TCGA-GBM	GBM	Not Reported;Gliomas	Brain	Glioblastoma Multiforme	TCGA	NA	TRUE	open	617	30326
+TCGA-HNSC	HNSC	Squamous Cell Neoplasms	Lip;Tonsil;Gum;Bones, joints and articular cartilage of other and unspecified sites;Palate;Other and unspecified parts of tongue;Floor of mouth;Other and ill-defined sites in lip, oral cavity and pharynx;Larynx;Base of tongue;Other and unspecified parts of mouth;Oropharynx;Hypopharynx	Head and Neck Squamous Cell Carcinoma	TCGA	NA	TRUE	open	528	34816
+TCGA-KICH	KICH	Adenomas and Adenocarcinomas	Kidney	Kidney Chromophobe	TCGA	NA	TRUE	open	113	5993
+TCGA-KIRC	KIRC	Adenomas and Adenocarcinomas	Kidney	Kidney Renal Clear Cell Carcinoma	TCGA	NA	TRUE	open	537	34535
+TCGA-KIRP	KIRP	Adenomas and Adenocarcinomas	Kidney	Kidney Renal Papillary Cell Carcinoma	TCGA	NA	TRUE	open	291	18618
+TCGA-LAML	LAML	Myeloid Leukemias	Hematopoietic and reticuloendothelial systems	Acute Myeloid Leukemia	TCGA	NA	TRUE	open	200	8839
+TCGA-LGG	LGG	Gliomas	Brain	Brain Lower Grade Glioma	TCGA	NA	TRUE	open	516	33453
+TCGA-LIHC	LIHC	Adenomas and Adenocarcinomas	Liver and intrahepatic bile ducts	Liver Hepatocellular Carcinoma	TCGA	NA	TRUE	open	377	23930
+TCGA-LUAD	LUAD	Ductal and Lobular Neoplasms;Cystic, Mucinous and Serous Neoplasms;Acinar Cell Neoplasms;Adenomas and Adenocarcinomas	Bronchus and lung	Lung Adenocarcinoma	TCGA	NA	TRUE	open	585	36224
+TCGA-LUSC	LUSC	Squamous Cell Neoplasms;Adenomas and Adenocarcinomas	Bronchus and lung	Lung Squamous Cell Carcinoma	TCGA	NA	TRUE	open	504	32065
+TCGA-MESO	MESO	Mesothelial Neoplasms	Bronchus and lung;Heart, mediastinum, and pleura	Mesothelioma	TCGA	NA	TRUE	open	87	5511
+TCGA-OV	OV	Cystic, Mucinous and Serous Neoplasms;Not Reported	Retroperitoneum and peritoneum;Ovary	Ovarian Serous Cystadenocarcinoma	TCGA	NA	TRUE	open	608	32864
+TCGA-PAAD	PAAD	Ductal and Lobular Neoplasms;Cystic, Mucinous and Serous Neoplasms;Epithelial Neoplasms, NOS;Adenomas and Adenocarcinomas	Pancreas	Pancreatic Adenocarcinoma	TCGA	NA	TRUE	open	185	12853
+TCGA-PCPG	PCPG	Paragangliomas and Glomus Tumors	Adrenal gland;Retroperitoneum and peritoneum;Other endocrine glands and related structures;Other and ill-defined sites;Connective, subcutaneous and other soft tissues;Spinal cord, cranial nerves, and other parts of central nervous system;Heart, mediastinum, and pleura	Pheochromocytoma and Paraganglioma	TCGA	NA	TRUE	open	179	11823
+TCGA-PRAD	PRAD	Ductal and Lobular Neoplasms;Cystic, Mucinous and Serous Neoplasms;Acinar Cell Neoplasms;Adenomas and Adenocarcinomas	Prostate gland	Prostate Adenocarcinoma	TCGA	NA	TRUE	open	500	31915
+TCGA-READ	READ	Cystic, Mucinous and Serous Neoplasms;Adenomas and Adenocarcinomas	Colon;Rectosigmoid junction;Rectum;Connective, subcutaneous and other soft tissues;Unknown	Rectum Adenocarcinoma	TCGA	NA	TRUE	open	172	10274
+TCGA-SARC	SARC	Fibromatous Neoplasms;Myomatous Neoplasms;Nerve Sheath Tumors;Synovial-like Neoplasms;Soft Tissue Tumors and Sarcomas, NOS;Lipomatous Neoplasms	Retroperitoneum and peritoneum;Colon;Other and unspecified male genital organs;Bones, joints and articular cartilage of limbs;Meninges;Stomach;Other and unspecified parts of tongue;Connective, subcutaneous and other soft tissues;Uterus, NOS;Kidney;Peripheral nerves and autonomic nervous system;Ovary;Corpus uteri	Sarcoma	TCGA	NA	TRUE	open	261	16252
+TCGA-SKCM	SKCM	Nevi and Melanomas	Colon;Spinal cord, cranial nerves, and other parts of central nervous system;Vulva;Skin;Vagina;Bones, joints and articular cartilage of other and unspecified sites;Small intestine;Connective, subcutaneous and other soft tissues;Nasal cavity and middle ear;Anus and anal canal;Liver and intrahepatic bile ducts;Bronchus and lung;Other and ill-defined sites;Adrenal gland;Corpus uteri;Parotid gland;Retroperitoneum and peritoneum;Breast;Lymph nodes;Brain	Skin Cutaneous Melanoma	TCGA	NA	TRUE	open	470	28203
+TCGA-STAD	STAD	Cystic, Mucinous and Serous Neoplasms;Adenomas and Adenocarcinomas	Stomach	Stomach Adenocarcinoma	TCGA	NA	TRUE	open	443	31088
+TCGA-TGCT	TGCT	Germ Cell Neoplasms	Testis	Testicular Germ Cell Tumors	TCGA	NA	TRUE	open	263	12851
+TCGA-THCA	THCA	Squamous Cell Neoplasms;Epithelial Neoplasms, NOS;Adenomas and Adenocarcinomas	Thyroid gland	Thyroid Carcinoma	TCGA	NA	TRUE	open	507	33411
+TCGA-THYM	THYM	Thymic Epithelial Neoplasms	Thymus;Other and ill-defined sites;Heart, mediastinum, and pleura	Thymoma	TCGA	NA	TRUE	open	124	7968
+TCGA-UCEC	UCEC	Not Reported;Cystic, Mucinous and Serous Neoplasms;Epithelial Neoplasms, NOS;Adenomas and Adenocarcinomas	Uterus, NOS;Corpus uteri	Uterine Corpus Endometrial Carcinoma	TCGA	NA	TRUE	open	560	33337
+TCGA-UCS	UCS	Basal Cell Neoplasms;Complex Mixed and Stromal Neoplasms	Uterus, NOS;Corpus uteri	Uterine Carcinosarcoma	TCGA	NA	TRUE	open	57	3720
+TCGA-UVM	UVM	Paragangliomas and Glomus Tumors;Nevi and Melanomas	Eye and adnexa	Uveal Melanoma	TCGA	NA	TRUE	open	80	5509

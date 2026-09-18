@@ -1,0 +1,237 @@
+schema_version: 1.0.0
+artifact: cup_feature_evidence_rules
+scope: >-
+  Conservative heuristic rules for research/prototype CUP interpretation. Rule
+  matches are supporting observations, not validated biomarkers of tissue of
+  origin. Absence of a feature is not interpreted as exclusionary evidence.
+evaluation_policy:
+  require_supplied_features: true
+  ignore_median_imputed_features: true
+  negative_result_policy: Do not treat an untriggered rule or absent mutation as evidence against a lineage.
+  scaled_value_definition: TCGA-reference z score from the locked clinical projection output.
+strength_weights:
+  weak: 0.33
+  moderate: 0.67
+  strong: 1.0
+rules:
+  - rule_id: apc_kras_lower_gi
+    evidence_type: driver mutation evidence
+    condition:
+      all:
+        - feature: driver_mutation_APC
+          value_source: raw
+          operator: ge
+          threshold: 1
+        - feature: driver_mutation_KRAS
+          value_source: raw
+          operator: ge
+          threshold: 1
+    finding: APC and KRAS mutations are both present.
+    supports: [lower_GI]
+    argues_against: []
+    strength: moderate
+    notes: This combination is compatible with lower-GI biology but is not specific for colorectal origin.
+
+  - rule_id: kras_smad4_pancreatobiliary
+    evidence_type: driver mutation evidence
+    condition:
+      all:
+        - feature: driver_mutation_KRAS
+          value_source: raw
+          operator: ge
+          threshold: 1
+        - feature: driver_mutation_SMAD4
+          value_source: raw
+          operator: ge
+          threshold: 1
+    finding: KRAS and SMAD4 mutations are both present.
+    supports: [pancreatobiliary_hepatobiliary]
+    argues_against: []
+    strength: moderate
+    notes: This pattern can occur in pancreatobiliary tumors but is not tissue-specific.
+
+  - rule_id: idh_glial_pattern
+    evidence_type: driver mutation evidence
+    condition:
+      any:
+        - feature: driver_mutation_IDH1
+          value_source: raw
+          operator: ge
+          threshold: 1
+        - feature: driver_mutation_IDH2
+          value_source: raw
+          operator: ge
+          threshold: 1
+    finding: An IDH1 or IDH2 mutation is present.
+    supports: [CNS_glial]
+    argues_against: []
+    strength: weak
+    notes: IDH mutations are not exclusive to glioma and require variant-level and pathologic context.
+
+  - rule_id: vhl_renal_pattern
+    evidence_type: driver mutation evidence
+    condition:
+      all:
+        - feature: driver_mutation_VHL
+          value_source: raw
+          operator: ge
+          threshold: 1
+    finding: A VHL mutation is present.
+    supports: [kidney]
+    argues_against: []
+    strength: moderate
+    notes: VHL mutation can support clear-cell renal biology but does not independently establish renal origin.
+
+  - rule_id: bap1_multilineage_pattern
+    evidence_type: driver mutation evidence
+    condition:
+      all:
+        - feature: driver_mutation_BAP1
+          value_source: raw
+          operator: ge
+          threshold: 1
+    finding: A BAP1 mutation is present.
+    supports: [kidney, mesothelioma]
+    argues_against: []
+    strength: weak
+    notes: BAP1 alterations occur in multiple tumor lineages and are intentionally treated as nonspecific.
+
+  - rule_id: braf_nf1_melanocytic_pattern
+    evidence_type: driver mutation evidence
+    condition:
+      any:
+        - feature: driver_mutation_BRAF
+          value_source: raw
+          operator: ge
+          threshold: 1
+        - feature: driver_mutation_NF1
+          value_source: raw
+          operator: ge
+          threshold: 1
+    finding: A BRAF or NF1 mutation is present.
+    supports: [melanoma]
+    argues_against: []
+    strength: weak
+    notes: BRAF and NF1 alterations are not melanoma-specific; UV signature and morphology are not represented here.
+
+  - rule_id: gynecologic_driver_pattern
+    evidence_type: driver mutation evidence
+    condition:
+      any:
+        - feature: driver_mutation_PTEN
+          value_source: raw
+          operator: ge
+          threshold: 1
+        - feature: driver_mutation_PIK3CA
+          value_source: raw
+          operator: ge
+          threshold: 1
+        - feature: driver_mutation_POLE
+          value_source: raw
+          operator: ge
+          threshold: 1
+    finding: A PTEN, PIK3CA, or POLE mutation is present.
+    supports: [breast_gynecologic_mullerian]
+    argues_against: []
+    strength: weak
+    notes: These alterations are shared across many cancers and are only weak contextual support.
+
+  - rule_id: squamous_tp53_aneuploid_pattern
+    evidence_type: copy-number/aneuploidy evidence
+    condition:
+      all:
+        - feature: driver_mutation_TP53
+          value_source: raw
+          operator: ge
+          threshold: 1
+        - feature: aneuploidy_score
+          value_source: scaled
+          operator: ge
+          threshold: 1
+    finding: TP53 mutation co-occurs with above-reference aneuploidy.
+    supports: [lung_squamous_head_neck_squamous]
+    argues_against: []
+    strength: weak
+    notes: This broad genomic pattern is common across carcinomas and is not specific for squamous lineage.
+
+  - rule_id: epithelial_expression_pattern
+    evidence_type: expression/pathway evidence
+    condition:
+      all:
+        - feature: epithelial_score
+          value_source: scaled
+          operator: ge
+          threshold: 0.75
+    finding: The epithelial expression score is at least 0.75 TCGA-reference standard deviations above the mean.
+    supports: [major_group:Carcinoma]
+    argues_against: [hematolymphoid]
+    strength: weak
+    notes: Epithelial differentiation supports a broad carcinoma-like phenotype but does not localize tissue of origin.
+
+  - rule_id: immune_inflamed_pattern
+    evidence_type: immune/stromal/EMT evidence
+    condition:
+      all:
+        - feature: immune_inflammatory_score
+          value_source: scaled
+          operator: ge
+          threshold: 1
+        - feature: cytotoxic_t_cell_score
+          value_source: scaled
+          operator: ge
+          threshold: 1
+    finding: Immune-inflammatory and cytotoxic T-cell scores are both elevated.
+    supports: [immune_inflamed_phenotype]
+    argues_against: []
+    strength: weak
+    notes: Immune infiltration is not equivalent to hematolymphoid tumor lineage.
+
+  - rule_id: stromal_emt_pattern
+    evidence_type: immune/stromal/EMT evidence
+    condition:
+      all:
+        - feature: stromal_score
+          value_source: scaled
+          operator: ge
+          threshold: 1
+        - feature: EMT_score
+          value_source: scaled
+          operator: ge
+          threshold: 1
+    finding: Stromal and EMT expression scores are both elevated.
+    supports: [mesenchymal_phenotype]
+    argues_against: []
+    strength: weak
+    notes: A stromal/EMT phenotype does not establish sarcoma or mesenchymal tissue of origin.
+
+  - rule_id: high_aneuploidy_pattern
+    evidence_type: copy-number/aneuploidy evidence
+    condition:
+      any:
+        - feature: aneuploidy_score
+          value_source: scaled
+          operator: ge
+          threshold: 1
+        - feature: total_arm_alteration_count
+          value_source: scaled
+          operator: ge
+          threshold: 1
+    finding: Aneuploidy or total arm-level alteration burden is elevated relative to TCGA.
+    supports: [copy_number_altered_phenotype]
+    argues_against: []
+    strength: weak
+    notes: Broad copy-number burden is not a tissue-specific feature.
+
+unavailable_evidence:
+  - label: Allele-specific copy-number and focal-event context
+    notes: Segment means and arm counts do not provide integer major/minor copy number or focal lineage-defining events.
+  - label: Mutational signatures
+    notes: UV, tobacco, mismatch-repair, and other formal mutational-signature exposures are not in the locked atlas.
+  - label: Variant-level interpretation
+    notes: Variant consequence, clonality, and pathogenicity are not represented by binary/count driver features.
+  - label: Broad lineage-marker expression panel
+    notes: The atlas contains pathway scores and expression PCs, not a validated tissue-of-origin marker panel.
+  - label: Fusion and structural-variant interpretation
+    notes: Fusion flags supplied outside the locked reference contract are not used for similarity or evidence scoring.
+  - label: Histology and immunophenotype
+    notes: Morphology and immunohistochemistry are outside this molecular prototype and remain essential.

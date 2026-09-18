@@ -1,0 +1,31 @@
+---
+title: "Level 2 Within-Group Molecular Similarity Trees"
+format:
+  html:
+    toc: true
+execute:
+  echo: true
+  warning: true
+---
+
+## Aim
+
+Build molecular similarity trees within biologically defined cancer groups. These analyses test whether molecular clustering supports lineage- or histology-associated groupings; they do not imply broad cancer types are related by literal organismal ancestry.
+
+## Planned group analyses
+
+- Carcinomas
+- Sarcomas, including TCGA-SARC subtype splits where metadata permits
+- Hematolymphoid tumors, mainly LAML and DLBC
+- CNS/glial tumors
+- Melanocytic tumors
+- Other feasible groups after metadata review
+
+## Carcinoma grouping tests
+
+Planned tests include pan-squamous, pan-GI, pan-kidney, pan-gynecologic, lung, and other lineage/histology-associated groupings.
+
+```{r}
+# Placeholder notebook. Tree-loading, visualization, and grouping-test code will
+# be added after Level 2 outputs are implemented.
+```

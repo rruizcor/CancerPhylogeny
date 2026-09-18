@@ -1,0 +1,34 @@
+project_code,project_id,cancer_name,broad_group,level2_group,lineage_notes
+ACC,TCGA-ACC,Adrenocortical Carcinoma,Neuroendocrine/adrenal/paraganglioma,adrenal,Adrenal cortical malignancy; analyze carefully with PCPG only as endocrine-adjacent and not same lineage.
+BLCA,TCGA-BLCA,Bladder Urothelial Carcinoma,Carcinoma,urothelial,Urothelial carcinoma.
+BRCA,TCGA-BRCA,Breast Invasive Carcinoma,Carcinoma,breast,Breast carcinoma with molecular subtypes.
+CESC,TCGA-CESC,Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma,Carcinoma,gynecologic_squamous_adeno,Mixed squamous and adenocarcinoma cohort.
+CHOL,TCGA-CHOL,Cholangiocarcinoma,Carcinoma,gi_hepatobiliary,Biliary tract carcinoma.
+COAD,TCGA-COAD,Colon Adenocarcinoma,Carcinoma,gi_colorectal,Colorectal adenocarcinoma.
+DLBC,TCGA-DLBC,Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Hematolymphoid,lymphoid,Limited TCGA hematolymphoid representation.
+ESCA,TCGA-ESCA,Esophageal Carcinoma,Carcinoma,gi_esophageal,Mixed squamous and adenocarcinoma cohort.
+GBM,TCGA-GBM,Glioblastoma Multiforme,CNS/glial,adult_glioma,High-grade glioma.
+HNSC,TCGA-HNSC,Head and Neck Squamous Cell Carcinoma,Carcinoma,pan_squamous,Squamous carcinoma.
+KICH,TCGA-KICH,Kidney Chromophobe,Carcinoma,kidney,Renal epithelial carcinoma.
+KIRC,TCGA-KIRC,Kidney Renal Clear Cell Carcinoma,Carcinoma,kidney,Renal epithelial carcinoma.
+KIRP,TCGA-KIRP,Kidney Renal Papillary Cell Carcinoma,Carcinoma,kidney,Renal epithelial carcinoma.
+LAML,TCGA-LAML,Acute Myeloid Leukemia,Hematolymphoid,myeloid,Leukemia; single-sample clonal analyses require special handling.
+LGG,TCGA-LGG,Brain Lower Grade Glioma,CNS/glial,adult_glioma,Lower-grade glioma.
+LIHC,TCGA-LIHC,Liver Hepatocellular Carcinoma,Carcinoma,gi_hepatobiliary,Hepatocellular carcinoma.
+LUAD,TCGA-LUAD,Lung Adenocarcinoma,Carcinoma,lung_adeno,Lung adenocarcinoma.
+LUSC,TCGA-LUSC,Lung Squamous Cell Carcinoma,Carcinoma,pan_squamous,Lung squamous carcinoma.
+MESO,TCGA-MESO,Mesothelioma,Mesothelial,mesothelial,Mesothelial malignancy.
+OV,TCGA-OV,Ovarian Serous Cystadenocarcinoma,Carcinoma,gynecologic,High-grade serous ovarian carcinoma-dominated cohort.
+PAAD,TCGA-PAAD,Pancreatic Adenocarcinoma,Carcinoma,gi_pancreatic,Pancreatic ductal adenocarcinoma-dominated cohort.
+PCPG,TCGA-PCPG,Pheochromocytoma and Paraganglioma,Neuroendocrine/adrenal/paraganglioma,paraganglioma,Pheochromocytoma/paraganglioma.
+PRAD,TCGA-PRAD,Prostate Adenocarcinoma,Carcinoma,prostate,Prostate adenocarcinoma.
+READ,TCGA-READ,Rectum Adenocarcinoma,Carcinoma,gi_colorectal,Colorectal adenocarcinoma.
+SARC,TCGA-SARC,Sarcoma,Sarcoma,sarcoma,Sarcoma cohort; split by histologic subtype when metadata permits.
+SKCM,TCGA-SKCM,Skin Cutaneous Melanoma,Melanocytic,melanoma,Cutaneous melanoma; includes metastatic samples.
+STAD,TCGA-STAD,Stomach Adenocarcinoma,Carcinoma,gi_gastric,Gastric adenocarcinoma.
+TGCT,TCGA-TGCT,Testicular Germ Cell Tumors,Germ cell,germ_cell,Testicular germ cell tumor.
+THCA,TCGA-THCA,Thyroid Carcinoma,Carcinoma,thyroid,Thyroid carcinoma.
+THYM,TCGA-THYM,Thymoma,Other or mixed,thymic,Thymic epithelial tumor; distinct biology from common carcinomas.
+UCEC,TCGA-UCEC,Uterine Corpus Endometrial Carcinoma,Carcinoma,gynecologic,Endometrial carcinoma; includes hypermutated/MSI and POLE subsets.
+UCS,TCGA-UCS,Uterine Carcinosarcoma,Other or mixed,gynecologic_mixed,Carcinosarcoma; mixed epithelial/mesenchymal phenotype.
+UVM,TCGA-UVM,Uveal Melanoma,Melanocytic,melanoma,Uveal melanoma; distinct from cutaneous melanoma.

@@ -1,0 +1,36 @@
+---
+title: "Level 1 Pan-Cancer Molecular Similarity Tree"
+format:
+  html:
+    toc: true
+execute:
+  echo: true
+  warning: true
+---
+
+## Aim
+
+Build and inspect pan-cancer molecular similarity trees across TCGA projects. These trees are trait dendrograms or molecular phylograms, not literal species-like evolutionary trees.
+
+## Planned inputs
+
+- `results/tables/level1_feature_matrix.tsv`
+- `config/cancer_group_map.csv`
+- `config/feature_sets.yaml`
+- `results/trees/level1_pan_cancer_gower_tree.nwk`
+- `results/trees/level1_pan_cancer_correlation_tree.nwk`
+
+## Analysis outline
+
+1. Load the project-level feature matrix.
+2. Remove features with excessive missingness.
+3. Scale continuous features.
+4. Compare Gower, correlation, and optional cosine distances.
+5. Build hierarchical and neighbor-joining trees.
+6. Map broad cancer group, TMB, aneuploidy, driver prevalence, immune/stromal features, and expression programs onto the tree.
+7. Report cluster stability using feature or sample bootstrap results.
+
+```{r}
+# Placeholder notebook. Data-loading code will be added after upstream feature
+# products are implemented.
+```

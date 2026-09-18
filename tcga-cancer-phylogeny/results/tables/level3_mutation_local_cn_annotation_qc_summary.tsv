@@ -1,0 +1,14 @@
+qc_section	metric	value
+global	pilot_samples_evaluated	84
+global	pilot_samples_with_segment_cn	84
+global	pilot_samples_with_mutations	84
+global	pilot_samples_with_mutation_to_segment_annotation	84
+global	total_mutations_evaluated	220124
+global	total_mutations_annotated_with_local_cn	213112
+global	percentage_mutations_annotated	96.815
+global	samples_eligible_for_downstream_clonal_input	84
+global	samples_excluded_from_downstream_clonal_input	0
+global	chromosome_naming_issues	Y
+global	coordinate_mismatch_issues	7012_mutations_without_overlapping_sample_level_segment
+global	non_allele_specific_cn_warning	segment_mean is not allele-specific integer copy number; PyClone-style preview sets major_cn/minor_cn to NA and uses normal_cn=2 only as an autosomal placeholder.
+global	patient_level_segment_matching_allowed	False

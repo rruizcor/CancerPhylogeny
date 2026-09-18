@@ -1,0 +1,6 @@
+project_code	project_id	n_neighbors	median_distance	min_distance	weighted_similarity_score	rank	interpretation_note
+COAD	TCGA-COAD	17	6.008674187239627	4.499025537071585	0.34383479898257374	1	Descriptive share of top-k molecular-similarity weight; not a tissue-of-origin probability or diagnosis
+PAAD	TCGA-PAAD	16	6.101735261544087	4.9016408813174355	0.3092113623586324	2	Descriptive share of top-k molecular-similarity weight; not a tissue-of-origin probability or diagnosis
+READ	TCGA-READ	11	6.104163027646707	3.473662386092428	0.22627798464455878	3	Descriptive share of top-k molecular-similarity weight; not a tissue-of-origin probability or diagnosis
+STAD	TCGA-STAD	3	5.685972691856346	4.485019342556648	0.06338402714207819	4	Descriptive share of top-k molecular-similarity weight; not a tissue-of-origin probability or diagnosis
+LUAD	TCGA-LUAD	3	6.420629903133624	5.309957295762741	0.05729182687215683	5	Descriptive share of top-k molecular-similarity weight; not a tissue-of-origin probability or diagnosis

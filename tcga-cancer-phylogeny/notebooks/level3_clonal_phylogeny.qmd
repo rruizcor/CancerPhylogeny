@@ -1,0 +1,29 @@
+---
+title: "Level 3 Within-Patient Clonal Phylogeny Pilot"
+format:
+  html:
+    toc: true
+execute:
+  echo: true
+  warning: true
+---
+
+## Aim
+
+Analyze a pilot set of high-information TCGA tumors for within-patient clonal structure. This is the level closest to true tumor phylogeny because the unit of analysis is subclones within a tumor.
+
+## Caution
+
+Most TCGA cases have a single bulk tumor sample. Such data often support mutation clustering and cellular prevalence estimation better than confident branching order. Candidate clonal trees should be interpreted cautiously unless supported by data quality, copy-number context, and orthogonal evidence.
+
+## Planned pilot selection
+
+- High-TMB SKCM
+- High-TMB LUAD/LUSC
+- MSI-high or POLE-mutated UCEC/COAD where identifiable
+- High-purity samples with sufficient mutation count, read depth, ref/alt counts, and copy-number segments
+
+```{python}
+# Placeholder notebook. PyClone-VI and optional PhyloWGS summaries will be added
+# after clonal input preparation is implemented.
+```

@@ -1,0 +1,260 @@
+schema_version: 1.0.0
+artifact: cup_lineage_groups
+scope: >-
+  Research/prototype grouping of TCGA projects for interpretable CUP-style
+  nearest-neighbor summaries. These groups are not diagnostic classes and do
+  not replace morphologic or immunophenotypic classification.
+assignment_policy: >-
+  Each of the 33 TCGA projects is assigned to exactly one primary interpretation
+  group. Aliases are used only to match free-text differential diagnoses and do
+  not alter the molecular similarity scores.
+expected_tcga_project_count: 33
+lineages:
+  - name: lower_GI
+    display_name: Lower gastrointestinal
+    projects: [COAD, READ]
+    major_cancer_groups: [Carcinoma]
+    aliases:
+      - lower GI
+      - lower gastrointestinal
+      - colorectal
+      - colon
+      - rectal
+      - colorectal adenocarcinoma
+      - gastrointestinal
+    description: Colon and rectal adenocarcinoma reference projects.
+    caveat: Gastrointestinal overlap is common; this group is not an organ-specific diagnosis.
+
+  - name: upper_GI
+    display_name: Upper gastrointestinal
+    projects: [ESCA, STAD]
+    major_cancer_groups: [Carcinoma]
+    aliases:
+      - upper GI
+      - upper gastrointestinal
+      - esophageal
+      - oesophageal
+      - gastric
+      - stomach
+      - gastrointestinal
+    description: Esophageal and gastric reference projects.
+    caveat: ESCA contains mixed histologies, and upper-GI molecular profiles can overlap other carcinomas.
+
+  - name: pancreatobiliary_hepatobiliary
+    display_name: Pancreatobiliary and hepatobiliary
+    projects: [CHOL, LIHC, PAAD]
+    major_cancer_groups: [Carcinoma]
+    aliases:
+      - pancreatobiliary
+      - pancreatic
+      - pancreas
+      - biliary
+      - cholangiocarcinoma
+      - hepatobiliary
+      - hepatic
+      - liver
+    description: Pancreatic, cholangiocarcinoma, and hepatocellular reference projects.
+    caveat: This intentionally broad group contains biologically distinct projects and must be decomposed in project-level review.
+
+  - name: lung_adenocarcinoma
+    display_name: Lung adenocarcinoma
+    projects: [LUAD]
+    major_cancer_groups: [Carcinoma]
+    aliases:
+      - lung adenocarcinoma
+      - pulmonary adenocarcinoma
+      - lung
+      - pulmonary
+      - LUAD
+    description: TCGA lung adenocarcinoma reference project.
+    caveat: Molecular similarity to LUAD is not sufficient to establish pulmonary origin.
+
+  - name: lung_squamous_head_neck_squamous
+    display_name: Lung squamous and head-and-neck squamous
+    projects: [LUSC, HNSC]
+    major_cancer_groups: [Carcinoma]
+    aliases:
+      - lung squamous
+      - pulmonary squamous
+      - head and neck squamous
+      - head neck squamous
+      - HNSCC
+      - squamous carcinoma
+      - lung
+      - pulmonary
+    description: Lung squamous-cell and head-and-neck squamous-cell reference projects.
+    caveat: Squamous molecular programs are shared across anatomic sites and are not tissue-specific.
+
+  - name: breast_gynecologic_mullerian
+    display_name: Breast, gynecologic, and Mullerian
+    projects: [BRCA, CESC, OV, UCEC, UCS]
+    major_cancer_groups: [Carcinoma, Other or mixed]
+    aliases:
+      - breast
+      - mammary
+      - gynecologic
+      - gynaecologic
+      - Mullerian
+      - ovarian
+      - ovary
+      - endometrial
+      - uterine
+      - uterus
+      - cervical
+      - cervix
+    description: Breast and gynecologic/Mullerian reference projects.
+    caveat: This broad group combines distinct lineages and histologies; project-level results remain essential.
+
+  - name: kidney
+    display_name: Kidney
+    projects: [KICH, KIRC, KIRP]
+    major_cancer_groups: [Carcinoma]
+    aliases:
+      - kidney
+      - renal
+      - renal cell carcinoma
+      - clear cell renal
+      - papillary renal
+      - chromophobe renal
+    description: Chromophobe, clear-cell, and papillary renal reference projects.
+    caveat: Renal projects are molecularly distinct and should not be treated as interchangeable.
+
+  - name: urothelial
+    display_name: Urothelial
+    projects: [BLCA]
+    major_cancer_groups: [Carcinoma]
+    aliases:
+      - urothelial
+      - bladder
+      - transitional cell
+      - BLCA
+    description: TCGA bladder urothelial carcinoma reference project.
+    caveat: BLCA includes mixed histologic annotations and does not represent every urothelial site.
+
+  - name: prostate
+    display_name: Prostate
+    projects: [PRAD]
+    major_cancer_groups: [Carcinoma]
+    aliases:
+      - prostate
+      - prostatic
+      - PRAD
+    description: TCGA prostate adenocarcinoma reference project.
+    caveat: Similarity to PRAD requires orthogonal prostate-lineage confirmation.
+
+  - name: thyroid
+    display_name: Thyroid
+    projects: [THCA]
+    major_cancer_groups: [Carcinoma]
+    aliases:
+      - thyroid
+      - thyroid carcinoma
+      - THCA
+    description: TCGA thyroid carcinoma reference project.
+    caveat: The project is dominated by differentiated thyroid carcinoma and is not a universal thyroid reference.
+
+  - name: melanoma
+    display_name: Melanocytic
+    projects: [SKCM, UVM]
+    major_cancer_groups: [Melanocytic]
+    aliases:
+      - melanoma
+      - melanocytic
+      - cutaneous melanoma
+      - uveal melanoma
+      - ocular melanoma
+    description: Cutaneous and uveal melanoma reference projects.
+    caveat: SKCM and UVM have distinct molecular programs and must be reviewed separately.
+
+  - name: CNS_glial
+    display_name: Central nervous system and glial
+    projects: [GBM, LGG]
+    major_cancer_groups: [CNS/glial]
+    aliases:
+      - CNS
+      - central nervous system
+      - brain
+      - glial
+      - glioma
+      - glioblastoma
+    description: Glioblastoma and lower-grade glioma reference projects.
+    caveat: This group does not cover all primary or metastatic CNS tumors.
+
+  - name: hematolymphoid
+    display_name: Hematolymphoid
+    projects: [DLBC, LAML]
+    major_cancer_groups: [Hematolymphoid]
+    aliases:
+      - hematolymphoid
+      - haematolymphoid
+      - lymphoma
+      - leukemia
+      - leukaemia
+      - myeloid
+      - lymphoid
+    description: Diffuse large B-cell lymphoma and acute myeloid leukemia reference projects.
+    caveat: TCGA representation is sparse and does not cover the full hematolymphoid diagnostic spectrum.
+
+  - name: sarcoma_mesenchymal
+    display_name: Sarcoma and mesenchymal
+    projects: [SARC]
+    major_cancer_groups: [Sarcoma]
+    aliases:
+      - sarcoma
+      - mesenchymal
+      - soft tissue
+      - SARC
+    description: TCGA sarcoma reference project.
+    caveat: SARC aggregates multiple histologic subtypes and is not a subtype-level reference.
+
+  - name: germ_cell
+    display_name: Germ cell
+    projects: [TGCT]
+    major_cancer_groups: [Germ cell]
+    aliases:
+      - germ cell
+      - testicular germ cell
+      - testis
+      - TGCT
+    description: TCGA testicular germ-cell tumor reference project.
+    caveat: This reference does not encompass all extragonadal or pediatric germ-cell tumors.
+
+  - name: endocrine_adrenal_paraganglioma
+    display_name: Endocrine, adrenal, and paraganglioma
+    projects: [ACC, PCPG]
+    major_cancer_groups: [Neuroendocrine/adrenal/paraganglioma]
+    aliases:
+      - endocrine
+      - adrenal
+      - adrenocortical
+      - paraganglioma
+      - pheochromocytoma
+      - neuroendocrine
+    description: Adrenocortical carcinoma and pheochromocytoma/paraganglioma reference projects.
+    caveat: ACC and PCPG are biologically distinct and do not represent all neuroendocrine neoplasms.
+
+  - name: mesothelioma
+    display_name: Mesothelioma
+    projects: [MESO]
+    major_cancer_groups: [Mesothelial]
+    aliases:
+      - mesothelioma
+      - mesothelial
+      - pleural
+      - MESO
+    description: TCGA mesothelioma reference project.
+    caveat: Molecular similarity requires morphologic and immunophenotypic confirmation of mesothelial lineage.
+
+  - name: other_or_mixed
+    display_name: Other or mixed (thymic reference)
+    projects: [THYM]
+    major_cancer_groups: [Other or mixed]
+    aliases:
+      - other or mixed
+      - mixed lineage
+      - thymic
+      - thymoma
+      - thymus
+      - THYM
+    description: Residual other-or-mixed group represented here by the TCGA thymoma project.
+    caveat: This residual grouping is heterogeneous; THYM is a limited reference and should be reviewed at project level.

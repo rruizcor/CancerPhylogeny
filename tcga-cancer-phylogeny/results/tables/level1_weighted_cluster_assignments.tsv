@@ -1,0 +1,166 @@
+project_code	project_id	major_cancer_group	weighting_scenario	cluster_k6
+ACC	TCGA-ACC	Neuroendocrine/adrenal/paraganglioma	unweighted_all_features	1
+ACC	TCGA-ACC	Neuroendocrine/adrenal/paraganglioma	equal_weight_mutation_copy_number_expression	1
+ACC	TCGA-ACC	Neuroendocrine/adrenal/paraganglioma	mutation_down_weighted	1
+ACC	TCGA-ACC	Neuroendocrine/adrenal/paraganglioma	copy_number_down_weighted	1
+ACC	TCGA-ACC	Neuroendocrine/adrenal/paraganglioma	expression_down_weighted	1
+BLCA	TCGA-BLCA	Carcinoma	unweighted_all_features	2
+BLCA	TCGA-BLCA	Carcinoma	equal_weight_mutation_copy_number_expression	2
+BLCA	TCGA-BLCA	Carcinoma	mutation_down_weighted	2
+BLCA	TCGA-BLCA	Carcinoma	copy_number_down_weighted	2
+BLCA	TCGA-BLCA	Carcinoma	expression_down_weighted	2
+BRCA	TCGA-BRCA	Carcinoma	unweighted_all_features	2
+BRCA	TCGA-BRCA	Carcinoma	equal_weight_mutation_copy_number_expression	2
+BRCA	TCGA-BRCA	Carcinoma	mutation_down_weighted	2
+BRCA	TCGA-BRCA	Carcinoma	copy_number_down_weighted	2
+BRCA	TCGA-BRCA	Carcinoma	expression_down_weighted	1
+CESC	TCGA-CESC	Carcinoma	unweighted_all_features	2
+CESC	TCGA-CESC	Carcinoma	equal_weight_mutation_copy_number_expression	2
+CESC	TCGA-CESC	Carcinoma	mutation_down_weighted	2
+CESC	TCGA-CESC	Carcinoma	copy_number_down_weighted	2
+CESC	TCGA-CESC	Carcinoma	expression_down_weighted	2
+CHOL	TCGA-CHOL	Carcinoma	unweighted_all_features	1
+CHOL	TCGA-CHOL	Carcinoma	equal_weight_mutation_copy_number_expression	3
+CHOL	TCGA-CHOL	Carcinoma	mutation_down_weighted	1
+CHOL	TCGA-CHOL	Carcinoma	copy_number_down_weighted	1
+CHOL	TCGA-CHOL	Carcinoma	expression_down_weighted	1
+COAD	TCGA-COAD	Carcinoma	unweighted_all_features	2
+COAD	TCGA-COAD	Carcinoma	equal_weight_mutation_copy_number_expression	2
+COAD	TCGA-COAD	Carcinoma	mutation_down_weighted	2
+COAD	TCGA-COAD	Carcinoma	copy_number_down_weighted	2
+COAD	TCGA-COAD	Carcinoma	expression_down_weighted	2
+DLBC	TCGA-DLBC	Hematolymphoid	unweighted_all_features	3
+DLBC	TCGA-DLBC	Hematolymphoid	equal_weight_mutation_copy_number_expression	4
+DLBC	TCGA-DLBC	Hematolymphoid	mutation_down_weighted	3
+DLBC	TCGA-DLBC	Hematolymphoid	copy_number_down_weighted	3
+DLBC	TCGA-DLBC	Hematolymphoid	expression_down_weighted	3
+ESCA	TCGA-ESCA	Carcinoma	unweighted_all_features	2
+ESCA	TCGA-ESCA	Carcinoma	equal_weight_mutation_copy_number_expression	2
+ESCA	TCGA-ESCA	Carcinoma	mutation_down_weighted	2
+ESCA	TCGA-ESCA	Carcinoma	copy_number_down_weighted	2
+ESCA	TCGA-ESCA	Carcinoma	expression_down_weighted	2
+GBM	TCGA-GBM	CNS/glial	unweighted_all_features	1
+GBM	TCGA-GBM	CNS/glial	equal_weight_mutation_copy_number_expression	3
+GBM	TCGA-GBM	CNS/glial	mutation_down_weighted	1
+GBM	TCGA-GBM	CNS/glial	copy_number_down_weighted	1
+GBM	TCGA-GBM	CNS/glial	expression_down_weighted	1
+HNSC	TCGA-HNSC	Carcinoma	unweighted_all_features	2
+HNSC	TCGA-HNSC	Carcinoma	equal_weight_mutation_copy_number_expression	2
+HNSC	TCGA-HNSC	Carcinoma	mutation_down_weighted	2
+HNSC	TCGA-HNSC	Carcinoma	copy_number_down_weighted	2
+HNSC	TCGA-HNSC	Carcinoma	expression_down_weighted	2
+KICH	TCGA-KICH	Carcinoma	unweighted_all_features	1
+KICH	TCGA-KICH	Carcinoma	equal_weight_mutation_copy_number_expression	3
+KICH	TCGA-KICH	Carcinoma	mutation_down_weighted	1
+KICH	TCGA-KICH	Carcinoma	copy_number_down_weighted	1
+KICH	TCGA-KICH	Carcinoma	expression_down_weighted	1
+KIRC	TCGA-KIRC	Carcinoma	unweighted_all_features	1
+KIRC	TCGA-KIRC	Carcinoma	equal_weight_mutation_copy_number_expression	3
+KIRC	TCGA-KIRC	Carcinoma	mutation_down_weighted	1
+KIRC	TCGA-KIRC	Carcinoma	copy_number_down_weighted	1
+KIRC	TCGA-KIRC	Carcinoma	expression_down_weighted	1
+KIRP	TCGA-KIRP	Carcinoma	unweighted_all_features	1
+KIRP	TCGA-KIRP	Carcinoma	equal_weight_mutation_copy_number_expression	3
+KIRP	TCGA-KIRP	Carcinoma	mutation_down_weighted	1
+KIRP	TCGA-KIRP	Carcinoma	copy_number_down_weighted	1
+KIRP	TCGA-KIRP	Carcinoma	expression_down_weighted	1
+LAML	TCGA-LAML	Hematolymphoid	unweighted_all_features	1
+LAML	TCGA-LAML	Hematolymphoid	equal_weight_mutation_copy_number_expression	5
+LAML	TCGA-LAML	Hematolymphoid	mutation_down_weighted	4
+LAML	TCGA-LAML	Hematolymphoid	copy_number_down_weighted	1
+LAML	TCGA-LAML	Hematolymphoid	expression_down_weighted	1
+LGG	TCGA-LGG	CNS/glial	unweighted_all_features	1
+LGG	TCGA-LGG	CNS/glial	equal_weight_mutation_copy_number_expression	3
+LGG	TCGA-LGG	CNS/glial	mutation_down_weighted	1
+LGG	TCGA-LGG	CNS/glial	copy_number_down_weighted	1
+LGG	TCGA-LGG	CNS/glial	expression_down_weighted	1
+LIHC	TCGA-LIHC	Carcinoma	unweighted_all_features	1
+LIHC	TCGA-LIHC	Carcinoma	equal_weight_mutation_copy_number_expression	3
+LIHC	TCGA-LIHC	Carcinoma	mutation_down_weighted	1
+LIHC	TCGA-LIHC	Carcinoma	copy_number_down_weighted	1
+LIHC	TCGA-LIHC	Carcinoma	expression_down_weighted	1
+LUAD	TCGA-LUAD	Carcinoma	unweighted_all_features	2
+LUAD	TCGA-LUAD	Carcinoma	equal_weight_mutation_copy_number_expression	2
+LUAD	TCGA-LUAD	Carcinoma	mutation_down_weighted	2
+LUAD	TCGA-LUAD	Carcinoma	copy_number_down_weighted	2
+LUAD	TCGA-LUAD	Carcinoma	expression_down_weighted	2
+LUSC	TCGA-LUSC	Carcinoma	unweighted_all_features	2
+LUSC	TCGA-LUSC	Carcinoma	equal_weight_mutation_copy_number_expression	2
+LUSC	TCGA-LUSC	Carcinoma	mutation_down_weighted	2
+LUSC	TCGA-LUSC	Carcinoma	copy_number_down_weighted	2
+LUSC	TCGA-LUSC	Carcinoma	expression_down_weighted	2
+MESO	TCGA-MESO	Mesothelial	unweighted_all_features	1
+MESO	TCGA-MESO	Mesothelial	equal_weight_mutation_copy_number_expression	3
+MESO	TCGA-MESO	Mesothelial	mutation_down_weighted	1
+MESO	TCGA-MESO	Mesothelial	copy_number_down_weighted	1
+MESO	TCGA-MESO	Mesothelial	expression_down_weighted	1
+OV	TCGA-OV	Carcinoma	unweighted_all_features	2
+OV	TCGA-OV	Carcinoma	equal_weight_mutation_copy_number_expression	2
+OV	TCGA-OV	Carcinoma	mutation_down_weighted	2
+OV	TCGA-OV	Carcinoma	copy_number_down_weighted	2
+OV	TCGA-OV	Carcinoma	expression_down_weighted	1
+PAAD	TCGA-PAAD	Carcinoma	unweighted_all_features	1
+PAAD	TCGA-PAAD	Carcinoma	equal_weight_mutation_copy_number_expression	3
+PAAD	TCGA-PAAD	Carcinoma	mutation_down_weighted	1
+PAAD	TCGA-PAAD	Carcinoma	copy_number_down_weighted	4
+PAAD	TCGA-PAAD	Carcinoma	expression_down_weighted	1
+PCPG	TCGA-PCPG	Neuroendocrine/adrenal/paraganglioma	unweighted_all_features	1
+PCPG	TCGA-PCPG	Neuroendocrine/adrenal/paraganglioma	equal_weight_mutation_copy_number_expression	3
+PCPG	TCGA-PCPG	Neuroendocrine/adrenal/paraganglioma	mutation_down_weighted	1
+PCPG	TCGA-PCPG	Neuroendocrine/adrenal/paraganglioma	copy_number_down_weighted	1
+PCPG	TCGA-PCPG	Neuroendocrine/adrenal/paraganglioma	expression_down_weighted	1
+PRAD	TCGA-PRAD	Carcinoma	unweighted_all_features	1
+PRAD	TCGA-PRAD	Carcinoma	equal_weight_mutation_copy_number_expression	3
+PRAD	TCGA-PRAD	Carcinoma	mutation_down_weighted	1
+PRAD	TCGA-PRAD	Carcinoma	copy_number_down_weighted	1
+PRAD	TCGA-PRAD	Carcinoma	expression_down_weighted	1
+READ	TCGA-READ	Carcinoma	unweighted_all_features	2
+READ	TCGA-READ	Carcinoma	equal_weight_mutation_copy_number_expression	2
+READ	TCGA-READ	Carcinoma	mutation_down_weighted	2
+READ	TCGA-READ	Carcinoma	copy_number_down_weighted	2
+READ	TCGA-READ	Carcinoma	expression_down_weighted	2
+SARC	TCGA-SARC	Sarcoma	unweighted_all_features	1
+SARC	TCGA-SARC	Sarcoma	equal_weight_mutation_copy_number_expression	3
+SARC	TCGA-SARC	Sarcoma	mutation_down_weighted	1
+SARC	TCGA-SARC	Sarcoma	copy_number_down_weighted	1
+SARC	TCGA-SARC	Sarcoma	expression_down_weighted	1
+SKCM	TCGA-SKCM	Melanocytic	unweighted_all_features	4
+SKCM	TCGA-SKCM	Melanocytic	equal_weight_mutation_copy_number_expression	2
+SKCM	TCGA-SKCM	Melanocytic	mutation_down_weighted	5
+SKCM	TCGA-SKCM	Melanocytic	copy_number_down_weighted	5
+SKCM	TCGA-SKCM	Melanocytic	expression_down_weighted	4
+STAD	TCGA-STAD	Carcinoma	unweighted_all_features	2
+STAD	TCGA-STAD	Carcinoma	equal_weight_mutation_copy_number_expression	2
+STAD	TCGA-STAD	Carcinoma	mutation_down_weighted	2
+STAD	TCGA-STAD	Carcinoma	copy_number_down_weighted	2
+STAD	TCGA-STAD	Carcinoma	expression_down_weighted	2
+TGCT	TCGA-TGCT	Germ cell	unweighted_all_features	1
+TGCT	TCGA-TGCT	Germ cell	equal_weight_mutation_copy_number_expression	1
+TGCT	TCGA-TGCT	Germ cell	mutation_down_weighted	2
+TGCT	TCGA-TGCT	Germ cell	copy_number_down_weighted	1
+TGCT	TCGA-TGCT	Germ cell	expression_down_weighted	1
+THCA	TCGA-THCA	Carcinoma	unweighted_all_features	1
+THCA	TCGA-THCA	Carcinoma	equal_weight_mutation_copy_number_expression	3
+THCA	TCGA-THCA	Carcinoma	mutation_down_weighted	1
+THCA	TCGA-THCA	Carcinoma	copy_number_down_weighted	1
+THCA	TCGA-THCA	Carcinoma	expression_down_weighted	1
+THYM	TCGA-THYM	Other or mixed	unweighted_all_features	1
+THYM	TCGA-THYM	Other or mixed	equal_weight_mutation_copy_number_expression	5
+THYM	TCGA-THYM	Other or mixed	mutation_down_weighted	4
+THYM	TCGA-THYM	Other or mixed	copy_number_down_weighted	1
+THYM	TCGA-THYM	Other or mixed	expression_down_weighted	1
+UCEC	TCGA-UCEC	Carcinoma	unweighted_all_features	5
+UCEC	TCGA-UCEC	Carcinoma	equal_weight_mutation_copy_number_expression	6
+UCEC	TCGA-UCEC	Carcinoma	mutation_down_weighted	6
+UCEC	TCGA-UCEC	Carcinoma	copy_number_down_weighted	6
+UCEC	TCGA-UCEC	Carcinoma	expression_down_weighted	5
+UCS	TCGA-UCS	Other or mixed	unweighted_all_features	6
+UCS	TCGA-UCS	Other or mixed	equal_weight_mutation_copy_number_expression	1
+UCS	TCGA-UCS	Other or mixed	mutation_down_weighted	2
+UCS	TCGA-UCS	Other or mixed	copy_number_down_weighted	2
+UCS	TCGA-UCS	Other or mixed	expression_down_weighted	6
+UVM	TCGA-UVM	Melanocytic	unweighted_all_features	1
+UVM	TCGA-UVM	Melanocytic	equal_weight_mutation_copy_number_expression	3
+UVM	TCGA-UVM	Melanocytic	mutation_down_weighted	1
+UVM	TCGA-UVM	Melanocytic	copy_number_down_weighted	1
+UVM	TCGA-UVM	Melanocytic	expression_down_weighted	1

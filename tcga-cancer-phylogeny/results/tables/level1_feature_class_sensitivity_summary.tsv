@@ -1,0 +1,8 @@
+feature_class_subset	n_features_used	distance_method_used	adjusted_rand_index_vs_all_feature_gower_k6	major_clustering_differences	dlbc_status	skcm_status	ucec_status	ucs_status	carcinoma_grouping_preserved	kidney_cns_endocrine_low_mutation_cluster_preserved
+all_features	52	gower_average_linkage_k6	1	none	singleton	singleton	singleton	singleton	TRUE	TRUE
+mutation_only	33	gower_average_linkage_k6	0.525683317624882	BRCA;COAD;DLBC;OV;PAAD;READ;SKCM;UCEC;UCS	grouped	singleton	singleton	grouped	FALSE	TRUE
+copy_number_aneuploidy_only	6	gower_average_linkage_k6	0.178894985326018	BRCA;CESC;CHOL;COAD;GBM;HNSC;KICH;KIRC;KIRP;LAML;LGG;LIHC;MESO;PAAD;PCPG;PRAD;SARC;SKCM;STAD;TGCT;THCA;THYM;UCS;UVM	grouped	grouped	grouped	grouped	FALSE	FALSE
+expression_only	13	gower_average_linkage_k6	-0.0201892744479495	BLCA;BRCA;CESC;COAD;DLBC;ESCA;HNSC;KIRC;LAML;LUAD;LUSC;OV;READ;SARC;SKCM;STAD;THYM;UCEC;UCS	singleton	grouped	grouped	grouped	TRUE	FALSE
+mutation_plus_copy_number	39	gower_average_linkage_k6	0.657869934024505	BRCA;COAD;DLBC;OV;READ	grouped	singleton	singleton	singleton	FALSE	TRUE
+mutation_plus_expression	46	gower_average_linkage_k6	0.892091558677486	COAD;DLBC;READ;SKCM;UCEC;UCS	singleton	singleton	singleton	grouped	FALSE	TRUE
+copy_number_plus_expression	19	gower_average_linkage_k6	0.406460296096904	BLCA;CESC;CHOL;COAD;ESCA;GBM;HNSC;KICH;KIRC;KIRP;LAML;LGG;LIHC;LUAD;LUSC;MESO;OV;PAAD;PCPG;PRAD;READ;SARC;SKCM;STAD;TGCT;THCA;THYM;UCEC;UCS;UVM	singleton	grouped	grouped	grouped	FALSE	FALSE

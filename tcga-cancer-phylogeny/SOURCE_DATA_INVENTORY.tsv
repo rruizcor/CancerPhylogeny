@@ -1,0 +1,5 @@
+path	size_bytes	sha256	repository_status
+data/raw/expression/EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv	1882540959	674b19b7ed9ae4c5ef35ee2824936429aa5d46c0735a3d180f41552fcbbdb658	local source download; excluded from Git
+data/raw/mc3/mc3.maf.gz	966940271	f55165728e8d3fdd4ae8d7f3e5e860e29f84b785dca10d28a6c7a388605e1a8e	local source download; excluded from Git
+mc3.v0.2.8.PUBLIC.maf	3742986760	884acc412f3d8e4001e6484e0dc5fb17e541d6c46e07c4aced770704eb7180f2	local source download; excluded from Git
+mc3.v0.2.8.PUBLIC.maf.gz	753339089	cb0caa0e3a80a24cc4ccaaacc95c690a4032cc87c8ac78519a5b33f3aa3f6b81	local source download; excluded from Git

@@ -1,0 +1,34 @@
+project_id	project_code	major_cancer_group	disease_type	primary_site	cluster_k3	cluster_k4	cluster_k5	cluster_k6	cluster_k7	cluster_k8
+TCGA-ACC	ACC	Neuroendocrine/adrenal/paraganglioma	Adenomas and Adenocarcinomas	Adrenal gland	1	1	1	1	1	1
+TCGA-BLCA	BLCA	Carcinoma	Epithelial Neoplasms, NOS;Squamous Cell Neoplasms;Transitional Cell Papillomas and Carcinomas;Adenomas and Adenocarcinomas	Bladder	2	2	2	2	2	2
+TCGA-BRCA	BRCA	Carcinoma	Adnexal and Skin Appendage Neoplasms;Adenomas and Adenocarcinomas;Ductal and Lobular Neoplasms;Cystic, Mucinous and Serous Neoplasms;Complex Epithelial Neoplasms;Fibroepithelial Neoplasms;Squamous Cell Neoplasms;Epithelial Neoplasms, NOS;Basal Cell Neoplasms	Breast	1	1	3	3	3	3
+TCGA-CESC	CESC	Carcinoma	Squamous Cell Neoplasms;Cystic, Mucinous and Serous Neoplasms;Complex Epithelial Neoplasms;Adenomas and Adenocarcinomas	Cervix uteri;Ovary	2	2	2	2	2	2
+TCGA-CHOL	CHOL	Carcinoma	Adenomas and Adenocarcinomas	Liver and intrahepatic bile ducts;Other and unspecified parts of biliary tract;Pancreas	1	1	1	1	1	1
+TCGA-COAD	COAD	Carcinoma	Cystic, Mucinous and Serous Neoplasms;Complex Epithelial Neoplasms;Epithelial Neoplasms, NOS;Adenomas and Adenocarcinomas	Colon;Rectosigmoid junction	2	2	2	2	2	2
+TCGA-DLBC	DLBC	Hematolymphoid	Mature B-Cell Lymphomas;Not Reported	Colon;Retroperitoneum and peritoneum;Heart, mediastinum, and pleura;Breast;Bones, joints and articular cartilage of other and unspecified sites;Lymph nodes;Small intestine;Stomach;Testis;Brain;Connective, subcutaneous and other soft tissues;Thyroid gland;Hematopoietic and reticuloendothelial systems;Other and unspecified major salivary glands	3	3	4	4	4	4
+TCGA-ESCA	ESCA	Carcinoma	Squamous Cell Neoplasms;Cystic, Mucinous and Serous Neoplasms;Adenomas and Adenocarcinomas	Esophagus;Stomach	2	2	2	5	5	5
+TCGA-GBM	GBM	CNS/glial	Not Reported;Gliomas	Brain	2	4	5	6	6	6
+TCGA-HNSC	HNSC	Carcinoma	Squamous Cell Neoplasms	Lip;Tonsil;Gum;Bones, joints and articular cartilage of other and unspecified sites;Palate;Other and unspecified parts of tongue;Floor of mouth;Other and ill-defined sites in lip, oral cavity and pharynx;Larynx;Base of tongue;Other and unspecified parts of mouth;Oropharynx;Hypopharynx	2	2	2	5	5	5
+TCGA-KICH	KICH	Carcinoma	Adenomas and Adenocarcinomas	Kidney	1	1	1	1	1	1
+TCGA-KIRC	KIRC	Carcinoma	Adenomas and Adenocarcinomas	Kidney	1	1	1	1	1	1
+TCGA-KIRP	KIRP	Carcinoma	Adenomas and Adenocarcinomas	Kidney	1	1	1	1	1	1
+TCGA-LAML	LAML	Hematolymphoid	Myeloid Leukemias	Hematopoietic and reticuloendothelial systems	3	3	4	4	4	4
+TCGA-LGG	LGG	CNS/glial	Gliomas	Brain	1	1	1	1	1	1
+TCGA-LIHC	LIHC	Carcinoma	Adenomas and Adenocarcinomas	Liver and intrahepatic bile ducts	1	1	1	1	1	1
+TCGA-LUAD	LUAD	Carcinoma	Ductal and Lobular Neoplasms;Cystic, Mucinous and Serous Neoplasms;Acinar Cell Neoplasms;Adenomas and Adenocarcinomas	Bronchus and lung	2	4	5	6	7	7
+TCGA-LUSC	LUSC	Carcinoma	Squamous Cell Neoplasms;Adenomas and Adenocarcinomas	Bronchus and lung	2	2	2	5	5	5
+TCGA-MESO	MESO	Mesothelial	Mesothelial Neoplasms	Bronchus and lung;Heart, mediastinum, and pleura	1	1	1	1	1	1
+TCGA-OV	OV	Carcinoma	Cystic, Mucinous and Serous Neoplasms;Not Reported	Retroperitoneum and peritoneum;Ovary	2	2	2	5	5	5
+TCGA-PAAD	PAAD	Carcinoma	Ductal and Lobular Neoplasms;Cystic, Mucinous and Serous Neoplasms;Epithelial Neoplasms, NOS;Adenomas and Adenocarcinomas	Pancreas	1	1	3	3	3	8
+TCGA-PCPG	PCPG	Neuroendocrine/adrenal/paraganglioma	Paragangliomas and Glomus Tumors	Adrenal gland;Retroperitoneum and peritoneum;Other endocrine glands and related structures;Other and ill-defined sites;Connective, subcutaneous and other soft tissues;Spinal cord, cranial nerves, and other parts of central nervous system;Heart, mediastinum, and pleura	1	1	1	1	1	1
+TCGA-PRAD	PRAD	Carcinoma	Ductal and Lobular Neoplasms;Cystic, Mucinous and Serous Neoplasms;Acinar Cell Neoplasms;Adenomas and Adenocarcinomas	Prostate gland	1	1	1	1	1	1
+TCGA-READ	READ	Carcinoma	Cystic, Mucinous and Serous Neoplasms;Adenomas and Adenocarcinomas	Colon;Rectosigmoid junction;Rectum;Connective, subcutaneous and other soft tissues;Unknown	2	2	2	2	2	2
+TCGA-SARC	SARC	Sarcoma	Fibromatous Neoplasms;Myomatous Neoplasms;Nerve Sheath Tumors;Synovial-like Neoplasms;Soft Tissue Tumors and Sarcomas, NOS;Lipomatous Neoplasms	Retroperitoneum and peritoneum;Colon;Other and unspecified male genital organs;Bones, joints and articular cartilage of limbs;Meninges;Stomach;Other and unspecified parts of tongue;Connective, subcutaneous and other soft tissues;Uterus, NOS;Kidney;Peripheral nerves and autonomic nervous system;Ovary;Corpus uteri	1	1	3	3	3	3
+TCGA-SKCM	SKCM	Melanocytic	Nevi and Melanomas	Colon;Spinal cord, cranial nerves, and other parts of central nervous system;Vulva;Skin;Vagina;Bones, joints and articular cartilage of other and unspecified sites;Small intestine;Connective, subcutaneous and other soft tissues;Nasal cavity and middle ear;Anus and anal canal;Liver and intrahepatic bile ducts;Bronchus and lung;Other and ill-defined sites;Adrenal gland;Corpus uteri;Parotid gland;Retroperitoneum and peritoneum;Breast;Lymph nodes;Brain	2	4	5	6	7	7
+TCGA-STAD	STAD	Carcinoma	Cystic, Mucinous and Serous Neoplasms;Adenomas and Adenocarcinomas	Stomach	2	2	2	2	2	2
+TCGA-TGCT	TGCT	Germ cell	Germ Cell Neoplasms	Testis	2	2	2	5	5	5
+TCGA-THCA	THCA	Carcinoma	Squamous Cell Neoplasms;Epithelial Neoplasms, NOS;Adenomas and Adenocarcinomas	Thyroid gland	1	1	1	1	1	1
+TCGA-THYM	THYM	Other or mixed	Thymic Epithelial Neoplasms	Thymus;Other and ill-defined sites;Heart, mediastinum, and pleura	3	3	4	4	4	4
+TCGA-UCEC	UCEC	Carcinoma	Not Reported;Cystic, Mucinous and Serous Neoplasms;Epithelial Neoplasms, NOS;Adenomas and Adenocarcinomas	Uterus, NOS;Corpus uteri	2	2	2	2	2	2
+TCGA-UCS	UCS	Other or mixed	Basal Cell Neoplasms;Complex Mixed and Stromal Neoplasms	Uterus, NOS;Corpus uteri	2	2	2	5	5	5
+TCGA-UVM	UVM	Melanocytic	Paragangliomas and Glomus Tumors;Nevi and Melanomas	Eye and adnexa	1	1	1	1	1	1

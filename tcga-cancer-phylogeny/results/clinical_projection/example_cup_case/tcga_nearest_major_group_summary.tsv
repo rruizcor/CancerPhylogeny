@@ -1,0 +1,2 @@
+major_cancer_group	n_neighbors	median_distance	min_distance	weighted_similarity_score	rank	interpretation_note
+Carcinoma	50	6.085411952907	3.473662386092428	0.9999999999999999	1	Descriptive share of top-k molecular-similarity weight; not a lineage probability or diagnosis

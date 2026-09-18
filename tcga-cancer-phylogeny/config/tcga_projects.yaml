@@ -1,0 +1,101 @@
+project_prefix: TCGA
+projects:
+  - code: ACC
+    project_id: TCGA-ACC
+    name: Adrenocortical Carcinoma
+  - code: BLCA
+    project_id: TCGA-BLCA
+    name: Bladder Urothelial Carcinoma
+  - code: BRCA
+    project_id: TCGA-BRCA
+    name: Breast Invasive Carcinoma
+  - code: CESC
+    project_id: TCGA-CESC
+    name: Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma
+  - code: CHOL
+    project_id: TCGA-CHOL
+    name: Cholangiocarcinoma
+  - code: COAD
+    project_id: TCGA-COAD
+    name: Colon Adenocarcinoma
+  - code: DLBC
+    project_id: TCGA-DLBC
+    name: Lymphoid Neoplasm Diffuse Large B-cell Lymphoma
+  - code: ESCA
+    project_id: TCGA-ESCA
+    name: Esophageal Carcinoma
+  - code: GBM
+    project_id: TCGA-GBM
+    name: Glioblastoma Multiforme
+  - code: HNSC
+    project_id: TCGA-HNSC
+    name: Head and Neck Squamous Cell Carcinoma
+  - code: KICH
+    project_id: TCGA-KICH
+    name: Kidney Chromophobe
+  - code: KIRC
+    project_id: TCGA-KIRC
+    name: Kidney Renal Clear Cell Carcinoma
+  - code: KIRP
+    project_id: TCGA-KIRP
+    name: Kidney Renal Papillary Cell Carcinoma
+  - code: LAML
+    project_id: TCGA-LAML
+    name: Acute Myeloid Leukemia
+  - code: LGG
+    project_id: TCGA-LGG
+    name: Brain Lower Grade Glioma
+  - code: LIHC
+    project_id: TCGA-LIHC
+    name: Liver Hepatocellular Carcinoma
+  - code: LUAD
+    project_id: TCGA-LUAD
+    name: Lung Adenocarcinoma
+  - code: LUSC
+    project_id: TCGA-LUSC
+    name: Lung Squamous Cell Carcinoma
+  - code: MESO
+    project_id: TCGA-MESO
+    name: Mesothelioma
+  - code: OV
+    project_id: TCGA-OV
+    name: Ovarian Serous Cystadenocarcinoma
+  - code: PAAD
+    project_id: TCGA-PAAD
+    name: Pancreatic Adenocarcinoma
+  - code: PCPG
+    project_id: TCGA-PCPG
+    name: Pheochromocytoma and Paraganglioma
+  - code: PRAD
+    project_id: TCGA-PRAD
+    name: Prostate Adenocarcinoma
+  - code: READ
+    project_id: TCGA-READ
+    name: Rectum Adenocarcinoma
+  - code: SARC
+    project_id: TCGA-SARC
+    name: Sarcoma
+  - code: SKCM
+    project_id: TCGA-SKCM
+    name: Skin Cutaneous Melanoma
+  - code: STAD
+    project_id: TCGA-STAD
+    name: Stomach Adenocarcinoma
+  - code: TGCT
+    project_id: TCGA-TGCT
+    name: Testicular Germ Cell Tumors
+  - code: THCA
+    project_id: TCGA-THCA
+    name: Thyroid Carcinoma
+  - code: THYM
+    project_id: TCGA-THYM
+    name: Thymoma
+  - code: UCEC
+    project_id: TCGA-UCEC
+    name: Uterine Corpus Endometrial Carcinoma
+  - code: UCS
+    project_id: TCGA-UCS
+    name: Uterine Carcinosarcoma
+  - code: UVM
+    project_id: TCGA-UVM
+    name: Uveal Melanoma

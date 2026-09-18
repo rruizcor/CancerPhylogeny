@@ -1,0 +1,536 @@
+configfile: "config/feature_sets.yaml"
+
+
+rule all:
+    input:
+        "results/reports/skeleton_ready.txt"
+
+
+rule config_sanity:
+    input:
+        "config/tcga_projects.yaml",
+        "config/cancer_group_map.csv",
+        "config/feature_sets.yaml",
+        "config/driver_genes.csv",
+        "tests/test_config.R"
+    output:
+        "results/reports/config_sanity.txt"
+    shell:
+        "Rscript tests/test_config.R > {output}"
+
+
+rule skeleton_ready:
+    input:
+        "results/reports/config_sanity.txt",
+        "README.md",
+        "environment.yml",
+        "Snakefile"
+    output:
+        "results/reports/skeleton_ready.txt"
+    shell:
+        "printf 'Skeleton configuration passed sanity checks. Data download rules are intentionally not enabled yet.\\n' > {output}"
+
+
+rule fetch_tcga_projects:
+    output:
+        "data/interim/tcga_projects.tsv"
+    script:
+        "scripts/00_fetch_tcga_projects.R"
+
+
+rule download_clinical:
+    input:
+        "data/interim/tcga_projects.tsv"
+    output:
+        "data/interim/clinical_metadata.tsv"
+    script:
+        "scripts/01_download_clinical.R"
+
+
+rule mutation_data_layer:
+    input:
+        projects="data/interim/tcga_projects.tsv",
+        drivers="config/driver_genes.csv"
+    output:
+        mutations="data/processed/mutations/mc3_somatic_mutations.parquet",
+        tmb="data/processed/features/tmb_by_sample.tsv",
+        prevalence="data/processed/features/mutation_prevalence_by_project.tsv",
+        driver_prevalence="data/processed/features/mutation_prevalence_by_project_driver_only.tsv",
+        qc="results/tables/mutation_layer_qc_summary.tsv"
+    shell:
+        "Rscript scripts/02_download_mc3_maf.R"
+
+
+rule copy_number_layer:
+    input:
+        projects="data/interim/tcga_projects.tsv",
+        mutations="data/processed/mutations/mc3_somatic_mutations.parquet"
+    output:
+        purity_ploidy="data/processed/features/purity_ploidy_by_sample.tsv",
+        aneuploidy_sample="data/processed/features/aneuploidy_by_sample.tsv",
+        aneuploidy_project="data/processed/features/aneuploidy_by_project.tsv",
+        arm_calls="data/processed/copy_number/arm_level_calls_by_sample.tsv",
+        segments="data/processed/copy_number/segments_by_sample.tsv",
+        qc="results/tables/copy_number_layer_qc_summary.tsv",
+        qc_figure="results/figures/copy_number_layer_qc_overview.pdf"
+    shell:
+        "Rscript scripts/03_download_copy_number.R"
+
+
+rule expression_layer:
+    input:
+        projects="data/interim/tcga_projects.tsv",
+        mutations="data/processed/mutations/mc3_somatic_mutations.parquet",
+        tmb="data/processed/features/tmb_by_sample.tsv",
+        purity_ploidy="data/processed/features/purity_ploidy_by_sample.tsv",
+        aneuploidy_sample="data/processed/features/aneuploidy_by_sample.tsv",
+        gene_sets="config/expression_gene_sets.yaml"
+    output:
+        matrix="data/processed/expression/expression_matrix_by_sample.tsv.gz",
+        sample_scores="data/processed/features/expression_pathway_scores_by_sample.tsv",
+        project_scores="data/processed/features/expression_pathway_scores_by_project.tsv",
+        pca_scores="data/processed/features/expression_pca_by_sample.tsv",
+        pca_variance="data/processed/features/expression_pca_variance.tsv",
+        qc="results/tables/expression_layer_qc_summary.tsv",
+        qc_figure="results/figures/expression_layer_qc_overview.pdf"
+    shell:
+        "Rscript scripts/04_download_expression.R"
+
+
+rule build_pan_cancer_features:
+    input:
+        mutations="data/processed/mutations/mc3_somatic_mutations.parquet",
+        tmb="data/processed/features/tmb_by_sample.tsv",
+        prevalence="data/processed/features/mutation_prevalence_by_project.tsv",
+        driver_prevalence="data/processed/features/mutation_prevalence_by_project_driver_only.tsv",
+        purity_ploidy="data/processed/features/purity_ploidy_by_sample.tsv",
+        aneuploidy_sample="data/processed/features/aneuploidy_by_sample.tsv",
+        aneuploidy_project="data/processed/features/aneuploidy_by_project.tsv",
+        expression_sample="data/processed/features/expression_pathway_scores_by_sample.tsv",
+        expression_project="data/processed/features/expression_pathway_scores_by_project.tsv",
+        group_map="config/cancer_group_map.csv",
+        drivers="config/driver_genes.csv"
+    output:
+        matrix="results/tables/level1_feature_matrix.tsv",
+        support="results/tables/level1_feature_support.tsv",
+        qc="results/tables/level1_feature_matrix_qc_summary.tsv"
+    script:
+        "scripts/06_build_pan_cancer_features.R"
+
+
+rule level1_pan_cancer_tree:
+    input:
+        matrix="results/tables/level1_feature_matrix.tsv",
+        support="results/tables/level1_feature_support.tsv",
+        feature_qc="results/tables/level1_feature_matrix_qc_summary.tsv",
+        group_map="config/cancer_group_map.csv",
+        projects="data/interim/tcga_projects.tsv"
+    output:
+        scaled="results/tables/level1_feature_matrix_scaled.tsv",
+        gower_distance="results/tables/level1_gower_distance_matrix.tsv",
+        correlation_distance="results/tables/level1_correlation_distance_matrix.tsv",
+        bootstrap="results/tables/level1_bootstrap_cluster_stability.tsv",
+        qc="results/tables/level1_tree_qc_summary.tsv",
+        gower_tree="results/trees/level1_pan_cancer_gower_hclust_tree.nwk",
+        correlation_tree="results/trees/level1_pan_cancer_correlation_hclust_tree.nwk",
+        gower_figure="results/figures/level1_pan_cancer_gower_tree.pdf",
+        correlation_figure="results/figures/level1_pan_cancer_correlation_tree.pdf",
+        heatmap="results/figures/level1_pan_cancer_tree_with_trait_heatmap.pdf",
+        pca="results/figures/level1_pan_cancer_feature_pca.pdf"
+    shell:
+        "Rscript scripts/07_level1_pan_cancer_tree.R"
+
+
+rule level1_interpretation:
+    input:
+        raw_matrix="results/tables/level1_feature_matrix.tsv",
+        scaled_matrix="results/tables/level1_feature_matrix_scaled.tsv",
+        gower_distance="results/tables/level1_gower_distance_matrix.tsv",
+        correlation_distance="results/tables/level1_correlation_distance_matrix.tsv",
+        bootstrap="results/tables/level1_bootstrap_cluster_stability.tsv",
+        tree_qc="results/tables/level1_tree_qc_summary.tsv",
+        gower_tree="results/trees/level1_pan_cancer_gower_hclust_tree.nwk",
+        correlation_tree="results/trees/level1_pan_cancer_correlation_hclust_tree.nwk",
+        group_map="config/cancer_group_map.csv",
+        projects="data/interim/tcga_projects.tsv"
+    output:
+        gower_assignments="results/tables/level1_gower_cluster_assignments.tsv",
+        correlation_assignments="results/tables/level1_correlation_cluster_assignments.tsv",
+        gower_summaries="results/tables/level1_gower_cluster_summaries.tsv",
+        correlation_summaries="results/tables/level1_correlation_cluster_summaries.tsv",
+        pca_loadings="results/tables/level1_feature_pca_loadings.tsv",
+        variance="results/tables/level1_feature_variance_summary.tsv",
+        association="results/tables/level1_feature_cluster_association.tsv",
+        class_summary="results/tables/level1_feature_class_sensitivity_summary.tsv",
+        class_assignments="results/tables/level1_feature_class_cluster_assignments.tsv",
+        weighting_summary="results/tables/level1_feature_weighting_sensitivity_summary.tsv",
+        weighting_assignments="results/tables/level1_weighted_cluster_assignments.tsv",
+        stable_pairs="results/tables/level1_stable_project_pairs.tsv",
+        bootstrap_project_stability="results/tables/level1_bootstrap_project_stability.tsv",
+        report="results/reports/level1_interpretation_summary.md",
+        trait_heatmap="results/figures/level1_cluster_trait_summary_heatmap.pdf",
+        driver_barplot="results/figures/level1_feature_driver_barplot.pdf",
+        bootstrap_heatmap="results/figures/level1_bootstrap_coclustering_heatmap.pdf",
+        class_heatmap="results/figures/level1_feature_class_sensitivity_heatmap.pdf",
+        weighting_mds="results/figures/level1_weighting_sensitivity_pca_or_mds.pdf"
+    shell:
+        "Rscript scripts/07b_interpret_level1_tree.R"
+
+
+rule level2_within_group_trees:
+    input:
+        matrix="results/tables/level1_feature_matrix.tsv",
+        scaled="results/tables/level1_feature_matrix_scaled.tsv",
+        group_map="config/cancer_group_map.csv",
+        projects="data/interim/tcga_projects.tsv"
+    output:
+        definitions="results/tables/level2_group_definitions.tsv",
+        qc="results/tables/level2_tree_qc_summary.tsv",
+        report="results/reports/level2_interpretation_summary.md",
+        carcinoma_matrix="results/tables/level2_carcinoma_all_feature_matrix.tsv",
+        carcinoma_scaled="results/tables/level2_carcinoma_all_feature_matrix_scaled.tsv",
+        carcinoma_gower_distance="results/tables/level2_carcinoma_all_gower_distance_matrix.tsv",
+        carcinoma_correlation_distance="results/tables/level2_carcinoma_all_correlation_distance_matrix.tsv",
+        carcinoma_gower_tree="results/trees/level2_carcinoma_all_gower_hclust_tree.nwk",
+        carcinoma_correlation_tree="results/trees/level2_carcinoma_all_correlation_hclust_tree.nwk",
+        carcinoma_gower_figure="results/figures/level2_carcinoma_all_gower_tree.pdf",
+        carcinoma_correlation_figure="results/figures/level2_carcinoma_all_correlation_tree.pdf",
+        carcinoma_heatmap="results/figures/level2_carcinoma_all_trait_heatmap.pdf",
+        carcinoma_pca="results/figures/level2_carcinoma_all_feature_pca.pdf"
+    shell:
+        "Rscript scripts/08_level2_within_group_trees.R"
+
+
+rule level3_candidate_selection:
+    input:
+        mutations="data/processed/mutations/mc3_somatic_mutations.parquet",
+        tmb="data/processed/features/tmb_by_sample.tsv",
+        purity_ploidy="data/processed/features/purity_ploidy_by_sample.tsv",
+        aneuploidy="data/processed/features/aneuploidy_by_sample.tsv",
+        projects="data/interim/tcga_projects.tsv",
+        group_map="config/cancer_group_map.csv"
+    output:
+        candidates="results/tables/level3_candidate_samples.tsv",
+        summary="results/tables/level3_candidate_summary_by_project.tsv",
+        pilot="results/tables/level3_pilot_cohort.tsv",
+        excluded="results/tables/level3_excluded_samples.tsv",
+        qc="results/tables/level3_candidate_selection_qc_summary.tsv"
+    shell:
+        "python scripts/09_select_level3_clonal_candidates.py"
+
+
+rule level3_segment_cn:
+    input:
+        candidates="results/tables/level3_candidate_samples.tsv",
+        pilot="results/tables/level3_pilot_cohort.tsv",
+        mutations="data/processed/mutations/mc3_somatic_mutations.parquet",
+        purity_ploidy="data/processed/features/purity_ploidy_by_sample.tsv",
+        aneuploidy="data/processed/features/aneuploidy_by_sample.tsv",
+        projects="data/interim/tcga_projects.tsv"
+    output:
+        manifest="results/tables/gdc_segment_cn_manifest_pilot.tsv",
+        segments="data/processed/copy_number/segments_by_sample.tsv.gz",
+        segment_summary="data/processed/copy_number/segment_level_cn_summary_by_sample.tsv",
+        candidates_with_segments="results/tables/level3_candidate_samples_with_segments.tsv",
+        pilot_with_segments="results/tables/level3_pilot_cohort_with_segments.tsv",
+        qc="results/tables/level3_segment_cn_qc_summary.tsv",
+        availability="results/tables/level3_segment_cn_availability_by_project.tsv"
+    shell:
+        "python scripts/09c_fetch_gdc_segment_cn.py"
+
+
+rule level3_mutation_local_cn_annotation:
+    input:
+        mutations="data/processed/mutations/mc3_somatic_mutations.parquet",
+        segments="data/processed/copy_number/segments_by_sample.tsv.gz",
+        segment_summary="data/processed/copy_number/segment_level_cn_summary_by_sample.tsv",
+        pilot_with_segments="results/tables/level3_pilot_cohort_with_segments.tsv",
+        candidates_with_segments="results/tables/level3_candidate_samples_with_segments.tsv",
+        purity_ploidy="data/processed/features/purity_ploidy_by_sample.tsv",
+        projects="data/interim/tcga_projects.tsv"
+    output:
+        annotated="data/processed/clonal/level3_mutations_with_local_cn.tsv.gz",
+        summary="results/tables/level3_mutation_local_cn_summary_by_sample.tsv",
+        pyclone_preview="data/processed/clonal/level3_pyclone_input_preview.tsv",
+        qc="results/tables/level3_mutation_local_cn_annotation_qc_summary.tsv",
+        coverage_figure="results/figures/level3_mutation_cn_annotation_coverage_by_sample.pdf",
+        vaf_segment_figure="results/figures/level3_mutation_vaf_vs_local_segment_mean.pdf",
+        depth_figure="results/figures/level3_mutation_depth_distribution.pdf"
+    shell:
+        "python scripts/10_annotate_mutations_with_local_cn.py"
+
+
+rule level3_clonal_input_preparation:
+    input:
+        annotated="data/processed/clonal/level3_mutations_with_local_cn.tsv.gz",
+        mutation_summary="results/tables/level3_mutation_local_cn_summary_by_sample.tsv",
+        pilot_with_segments="results/tables/level3_pilot_cohort_with_segments.tsv",
+        candidates_with_segments="results/tables/level3_candidate_samples_with_segments.tsv",
+        purity_ploidy="data/processed/features/purity_ploidy_by_sample.tsv"
+    output:
+        copy_neutral="data/processed/clonal/level3_copy_neutral_vaf_clustering_input.tsv.gz",
+        segment_annotated="data/processed/clonal/level3_segment_annotated_clonal_input.tsv.gz",
+        readiness="results/tables/level3_clonal_input_readiness_by_sample.tsv",
+        limited_vaf_pilot="results/tables/level3_limited_vaf_clustering_pilot_samples.tsv",
+        qc="results/tables/level3_clonal_input_preparation_qc_summary.tsv",
+        sample_figure="results/figures/level3_copy_neutral_candidate_counts_by_sample.pdf",
+        project_figure="results/figures/level3_copy_neutral_candidate_counts_by_project.pdf",
+        vaf_figure="results/figures/level3_vaf_distribution_copy_neutral_candidates.pdf",
+        readiness_figure="results/figures/level3_readiness_class_by_project.pdf"
+    shell:
+        "python scripts/11_prepare_clonal_input_sets.py"
+
+
+rule level3_limited_vaf_clonal_clustering:
+    input:
+        copy_neutral="data/processed/clonal/level3_copy_neutral_vaf_clustering_input.tsv.gz",
+        limited_vaf_pilot="results/tables/level3_limited_vaf_clustering_pilot_samples.tsv"
+    output:
+        assignments="results/clonal/limited_vaf/level3_limited_vaf_cluster_assignments.tsv.gz",
+        sample_summary="results/tables/level3_limited_vaf_clonal_complexity_by_sample.tsv",
+        project_summary="results/tables/level3_limited_vaf_clonal_complexity_by_project.tsv",
+        qc="results/tables/level3_limited_vaf_clustering_qc_summary.tsv"
+    shell:
+        "python scripts/12_limited_vaf_clonal_clustering.py"
+
+
+rule level3_allele_specific_cn_readiness:
+    input:
+        mutations="data/processed/clonal/level3_mutations_with_local_cn.tsv.gz",
+        segments="data/processed/copy_number/segments_by_sample.tsv.gz",
+        limited_vaf_pilot="results/tables/level3_limited_vaf_clustering_pilot_samples.tsv"
+    output:
+        availability="results/tables/level3_allele_specific_cn_availability_by_sample.tsv",
+        standardized_segments="data/processed/allele_specific_cn/allele_specific_segments_by_sample.tsv.gz",
+        mutation_readiness="results/tables/level3_mutation_to_allele_specific_cn_readiness.tsv",
+        external_manifest="results/tables/level3_allele_specific_cn_external_inference_manifest.tsv",
+        qc="results/tables/level3_allele_specific_cn_readiness_qc_summary.tsv",
+        planning_report="results/reports/level3_allele_specific_cn_and_pyclone_plan.md"
+    shell:
+        "python scripts/12b_allele_specific_cn_readiness.py"
+
+
+rule tcga_sample_reference_atlas:
+    input:
+        mutations="data/processed/mutations/mc3_somatic_mutations.parquet",
+        tmb="data/processed/features/tmb_by_sample.tsv",
+        purity_ploidy="data/processed/features/purity_ploidy_by_sample.tsv",
+        aneuploidy="data/processed/features/aneuploidy_by_sample.tsv",
+        expression_scores="data/processed/features/expression_pathway_scores_by_sample.tsv",
+        expression_pca="data/processed/features/expression_pca_by_sample.tsv",
+        group_map="config/cancer_group_map.csv",
+        projects="data/interim/tcga_projects.tsv",
+        drivers="config/driver_genes.csv"
+    output:
+        matrix="results/reference_atlas/tcga_sample_reference_matrix.tsv.gz",
+        metadata="results/reference_atlas/tcga_sample_reference_metadata.tsv",
+        scaled="results/reference_atlas/tcga_sample_reference_scaled_matrix.tsv.gz",
+        definitions="results/reference_atlas/tcga_reference_feature_definitions.yaml",
+        scaler="results/reference_atlas/tcga_reference_scaler_parameters.json",
+        missingness="results/reference_atlas/tcga_reference_feature_missingness.tsv",
+        pca_coordinates="results/reference_atlas/tcga_reference_pca_coordinates.tsv",
+        pca_model="results/reference_atlas/tcga_reference_pca_model.pkl",
+        pca_variance="results/reference_atlas/tcga_reference_pca_variance.tsv",
+        nn_index="results/reference_atlas/tcga_reference_nearest_neighbor_index.pkl",
+        nn_metadata="results/reference_atlas/tcga_reference_nearest_neighbor_metadata.json",
+        qc="results/tables/tcga_sample_reference_atlas_qc_summary.tsv",
+        pca_project_figure="results/figures/tcga_sample_reference_pca_by_project.pdf",
+        pca_group_figure="results/figures/tcga_sample_reference_pca_by_major_group.pdf",
+        missingness_figure="results/figures/tcga_sample_reference_feature_missingness.pdf",
+        samples_by_project_figure="results/figures/tcga_sample_reference_samples_by_project.pdf"
+    shell:
+        "python scripts/20_build_tcga_sample_reference_atlas.py"
+
+
+rule clinical_case_projection_example:
+    input:
+        reference_matrix="results/reference_atlas/tcga_sample_reference_matrix.tsv.gz",
+        reference_metadata="results/reference_atlas/tcga_sample_reference_metadata.tsv",
+        reference_scaled="results/reference_atlas/tcga_sample_reference_scaled_matrix.tsv.gz",
+        feature_definitions="results/reference_atlas/tcga_reference_feature_definitions.yaml",
+        scaler_parameters="results/reference_atlas/tcga_reference_scaler_parameters.json",
+        pca_model="results/reference_atlas/tcga_reference_pca_model.pkl",
+        pca_coordinates="results/reference_atlas/tcga_reference_pca_coordinates.tsv",
+        nn_index="results/reference_atlas/tcga_reference_nearest_neighbor_index.pkl",
+        nn_metadata="results/reference_atlas/tcga_reference_nearest_neighbor_metadata.json",
+        clinical_metadata="data/clinical_queries/example_cup_case/clinical_metadata.tsv",
+        wes_features="data/clinical_queries/example_cup_case/wes_features.tsv",
+        wts_features="data/clinical_queries/example_cup_case/wts_features.tsv"
+    output:
+        report="results/clinical_projection/example_cup_case/clinical_tcga_projection_report.md",
+        neighbors="results/clinical_projection/example_cup_case/tcga_nearest_neighbors.tsv",
+        project_summary="results/clinical_projection/example_cup_case/tcga_nearest_project_summary.tsv",
+        major_group_summary="results/clinical_projection/example_cup_case/tcga_nearest_major_group_summary.tsv"
+    shell:
+        "python scripts/21_project_clinical_case_to_tcga.py --case-id example_cup_case"
+
+
+rule cup_interpretation_example:
+    input:
+        feature_vector="results/clinical_projection/example_cup_case/clinical_feature_vector.tsv",
+        scaled_feature_vector="results/clinical_projection/example_cup_case/clinical_feature_vector_scaled.tsv",
+        feature_missingness="results/clinical_projection/example_cup_case/clinical_feature_missingness.tsv",
+        neighbors="results/clinical_projection/example_cup_case/tcga_nearest_neighbors.tsv",
+        project_summary="results/clinical_projection/example_cup_case/tcga_nearest_project_summary.tsv",
+        major_group_summary="results/clinical_projection/example_cup_case/tcga_nearest_major_group_summary.tsv",
+        projection_qc="results/clinical_projection/example_cup_case/clinical_projection_qc_summary.tsv",
+        clinical_metadata="data/clinical_queries/example_cup_case/clinical_metadata.tsv",
+        reference_matrix="results/reference_atlas/tcga_sample_reference_matrix.tsv.gz",
+        reference_metadata="results/reference_atlas/tcga_sample_reference_metadata.tsv",
+        feature_definitions="results/reference_atlas/tcga_reference_feature_definitions.yaml",
+        lineage_groups="config/cup_lineage_groups.yaml",
+        evidence_rules="config/cup_feature_evidence_rules.yaml"
+    output:
+        report="results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_interpretation_report.md",
+        ranked_lineages="results/clinical_projection/example_cup_case/cup_interpretation/cup_ranked_lineage_interpretation.tsv",
+        ambiguity="results/clinical_projection/example_cup_case/cup_interpretation/cup_ambiguity_metrics.tsv",
+        evidence="results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_evidence_table.tsv",
+        concordance="results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_pathologic_concordance.tsv"
+    shell:
+        "python scripts/22_cup_nearest_neighbor_classifier.py --case-id example_cup_case"
+
+
+rule known_primary_projection_validation:
+    input:
+        raw_matrix="results/reference_atlas/tcga_sample_reference_matrix.tsv.gz",
+        scaled_matrix="results/reference_atlas/tcga_sample_reference_scaled_matrix.tsv.gz",
+        metadata="results/reference_atlas/tcga_sample_reference_metadata.tsv",
+        feature_definitions="results/reference_atlas/tcga_reference_feature_definitions.yaml",
+        scaler_parameters="results/reference_atlas/tcga_reference_scaler_parameters.json",
+        nn_index="results/reference_atlas/tcga_reference_nearest_neighbor_index.pkl",
+        nn_metadata="results/reference_atlas/tcga_reference_nearest_neighbor_metadata.json",
+        lineage_groups="config/cup_lineage_groups.yaml",
+        cancer_group_map="config/cancer_group_map.csv"
+    output:
+        overall="results/validation/known_primary_projection/known_primary_overall_metrics.tsv",
+        predictions="results/validation/known_primary_projection/known_primary_projection_predictions.tsv",
+        report="results/validation/known_primary_projection/known_primary_validation_report.md"
+    shell:
+        "python scripts/23_validate_known_primary_projection.py --top-k 50 --metric euclidean"
+
+
+rule calibration_feature_ablation:
+    input:
+        predictions="results/validation/known_primary_projection/known_primary_projection_predictions.tsv",
+        overall_metrics="results/validation/known_primary_projection/known_primary_overall_metrics.tsv",
+        ambiguity="results/validation/known_primary_projection/known_primary_ambiguity_performance.tsv",
+        scaled_matrix="results/reference_atlas/tcga_sample_reference_scaled_matrix.tsv.gz",
+        metadata="results/reference_atlas/tcga_sample_reference_metadata.tsv",
+        feature_definitions="results/reference_atlas/tcga_reference_feature_definitions.yaml",
+        scaler_parameters="results/reference_atlas/tcga_reference_scaler_parameters.json",
+        lineage_groups="config/cup_lineage_groups.yaml",
+        cancer_group_map="config/cancer_group_map.csv"
+    output:
+        thresholds="results/validation/calibration_feature_ablation/calibrated_confidence_thresholds.tsv",
+        ablation_summary="results/validation/calibration_feature_ablation/feature_ablation_performance_summary.tsv",
+        report="results/validation/calibration_feature_ablation/calibration_feature_ablation_report.md"
+    shell:
+        "python scripts/24_calibrate_projection_confidence_and_feature_ablation.py"
+
+
+rule integrated_project_report:
+    input:
+        level1_feature_matrix="results/tables/level1_feature_matrix.tsv",
+        level1_tree_qc="results/tables/level1_tree_qc_summary.tsv",
+        level1_bootstrap="results/tables/level1_bootstrap_cluster_stability.tsv",
+        level1_gower_tree="results/trees/level1_pan_cancer_gower_hclust_tree.nwk",
+        level1_correlation_tree="results/trees/level1_pan_cancer_correlation_hclust_tree.nwk",
+        level2_group_definitions="results/tables/level2_group_definitions.tsv",
+        level2_tree_qc="results/tables/level2_tree_qc_summary.tsv",
+        level2_report="results/reports/level2_interpretation_summary.md",
+        level3_candidate_qc="results/tables/level3_candidate_selection_qc_summary.tsv",
+        level3_candidate_project="results/tables/level3_candidate_summary_by_project.tsv",
+        level3_pilot="results/tables/level3_pilot_cohort.tsv",
+        level3_segment_qc="results/tables/level3_segment_cn_qc_summary.tsv",
+        level3_local_cn_qc="results/tables/level3_mutation_local_cn_annotation_qc_summary.tsv",
+        level3_clonal_input_qc="results/tables/level3_clonal_input_preparation_qc_summary.tsv",
+        level3_vaf_qc="results/tables/level3_limited_vaf_clustering_qc_summary.tsv",
+        level3_vaf_sample="results/tables/level3_limited_vaf_clonal_complexity_by_sample.tsv",
+        level3_vaf_project="results/tables/level3_limited_vaf_clonal_complexity_by_project.tsv",
+        level3_ascn_qc="results/tables/level3_allele_specific_cn_readiness_qc_summary.tsv",
+        reference_atlas_qc="results/tables/tcga_sample_reference_atlas_qc_summary.tsv",
+        clinical_projection_qc="results/clinical_projection/example_cup_case/clinical_projection_qc_summary.tsv",
+        clinical_project_summary="results/clinical_projection/example_cup_case/tcga_nearest_project_summary.tsv",
+        clinical_major_group_summary="results/clinical_projection/example_cup_case/tcga_nearest_major_group_summary.tsv",
+        clinical_report="results/clinical_projection/example_cup_case/clinical_tcga_projection_report.md",
+        cup_report="results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_interpretation_report.md",
+        cup_ranked="results/clinical_projection/example_cup_case/cup_interpretation/cup_ranked_lineage_interpretation.tsv",
+        cup_ambiguity="results/clinical_projection/example_cup_case/cup_interpretation/cup_ambiguity_metrics.tsv",
+        cup_evidence="results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_evidence_table.tsv",
+        cup_concordance="results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_pathologic_concordance.tsv"
+    output:
+        main_report="results/reports/integrated_tcga_cancer_phylogeny_report.md",
+        executive_summary="results/reports/integrated_tcga_cancer_phylogeny_executive_summary.md",
+        methods="results/reports/integrated_tcga_cancer_phylogeny_methods.md",
+        limitations_next_steps="results/reports/integrated_tcga_cancer_phylogeny_limitations_next_steps.md",
+        html_report="results/reports/integrated_tcga_cancer_phylogeny_report.html",
+        project_summary="results/tables/integrated_project_summary.tsv",
+        outputs_index="results/tables/integrated_project_outputs_index.tsv"
+    shell:
+        "python scripts/13_generate_integrated_project_report.py"
+
+
+rule preprint_manuscript:
+    input:
+        integrated_report="results/reports/integrated_tcga_cancer_phylogeny_report.md",
+        executive_summary="results/reports/integrated_tcga_cancer_phylogeny_executive_summary.md",
+        methods="results/reports/integrated_tcga_cancer_phylogeny_methods.md",
+        limitations_next_steps="results/reports/integrated_tcga_cancer_phylogeny_limitations_next_steps.md",
+        project_summary="results/tables/integrated_project_summary.tsv",
+        outputs_index="results/tables/integrated_project_outputs_index.tsv",
+        level1_feature_matrix="results/tables/level1_feature_matrix.tsv",
+        level1_tree_qc="results/tables/level1_tree_qc_summary.tsv",
+        level1_interpretation="results/reports/level1_interpretation_summary.md",
+        level2_group_definitions="results/tables/level2_group_definitions.tsv",
+        level2_tree_qc="results/tables/level2_tree_qc_summary.tsv",
+        level2_report="results/reports/level2_interpretation_summary.md",
+        level3_candidate_qc="results/tables/level3_candidate_selection_qc_summary.tsv",
+        level3_segment_qc="results/tables/level3_segment_cn_qc_summary.tsv",
+        level3_local_cn_qc="results/tables/level3_mutation_local_cn_annotation_qc_summary.tsv",
+        level3_clonal_input_qc="results/tables/level3_clonal_input_preparation_qc_summary.tsv",
+        level3_vaf_qc="results/tables/level3_limited_vaf_clustering_qc_summary.tsv",
+        level3_ascn_qc="results/tables/level3_allele_specific_cn_readiness_qc_summary.tsv",
+        reference_atlas_qc="results/tables/tcga_sample_reference_atlas_qc_summary.tsv",
+        reference_features="results/reference_atlas/tcga_reference_feature_definitions.yaml",
+        clinical_projection_qc="results/clinical_projection/example_cup_case/clinical_projection_qc_summary.tsv",
+        clinical_project_summary="results/clinical_projection/example_cup_case/tcga_nearest_project_summary.tsv",
+        clinical_major_group_summary="results/clinical_projection/example_cup_case/tcga_nearest_major_group_summary.tsv",
+        clinical_report="results/clinical_projection/example_cup_case/clinical_tcga_projection_report.md",
+        cup_report="results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_interpretation_report.md",
+        cup_ranked="results/clinical_projection/example_cup_case/cup_interpretation/cup_ranked_lineage_interpretation.tsv",
+        cup_ambiguity="results/clinical_projection/example_cup_case/cup_interpretation/cup_ambiguity_metrics.tsv",
+        cup_evidence="results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_evidence_table.tsv",
+        cup_concordance="results/clinical_projection/example_cup_case/cup_interpretation/cup_molecular_pathologic_concordance.tsv",
+        script="scripts/14_generate_preprint_manuscript.py"
+    output:
+        manuscript="results/reports/tcga_cancer_phylogeny_preprint.md",
+        figures_tables_index="results/reports/tcga_cancer_phylogeny_preprint_figures_tables_index.tsv"
+    shell:
+        "python scripts/14_generate_preprint_manuscript.py"
+
+
+rule prepare_clonal_inputs:
+    input:
+        mutations="data/processed/mutations/mc3_somatic_mutations.parquet",
+        purity_ploidy="data/processed/features/purity_ploidy_by_sample.tsv"
+    output:
+        "results/clonal/prepared_inputs/pilot_samples.tsv"
+    shell:
+        "python scripts/09_prepare_clonal_inputs.py"
+
+
+rule summarize_clonal_trees:
+    output:
+        "results/tables/clonal_summary_by_sample.tsv"
+    script:
+        "scripts/12_summarize_clonal_trees.R"
+
+
+rule make_figures:
+    input:
+        gower_tree="results/trees/level1_pan_cancer_gower_tree.nwk",
+        feature_matrix="results/tables/level1_feature_matrix.tsv"
+    output:
+        "results/figures/level1_pan_cancer_tree.pdf"
+    script:
+        "scripts/13_make_figures.R"

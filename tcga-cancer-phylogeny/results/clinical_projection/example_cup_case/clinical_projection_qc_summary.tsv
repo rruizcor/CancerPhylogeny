@@ -1,0 +1,23 @@
+qc_section	metric	value
+global	case_id	example_cup_case
+global	query_sample_id	SYNTHETIC-CUP-001
+global	feature_contract_sha256	5748791f2949084b801c66d9cbe6eb7efec87b44376ebf7eadecc93342f249f7
+global	number_of_expected_reference_features	97
+global	atlas_feature_count_used	97
+global	number_of_clinical_features_supplied	77
+global	number_of_missing_clinical_features	20
+global	percent_feature_coverage	79.381
+global	number_of_extra_clinical_features_ignored	4
+global	WES_features_present	True
+global	WTS_features_present	True
+WES	number_of_expected_reference_features	66
+WES	number_of_clinical_features_supplied	66
+WTS	number_of_expected_reference_features	31
+WTS	number_of_clinical_features_supplied	11
+global	nearest_neighbor_metric	euclidean
+global	nearest_neighbor_method	saved_nearest_neighbor_index
+global	top_k_neighbors_returned	50
+global	PCA_model_reused_without_refit	True
+global	projection_status	success_with_reference_median_imputation
+global	warnings	20 of 97 locked reference features were median-imputed; 4 supplied clinical features were not present in the locked atlas and were ignored
+global	limitations	Research/prototype molecular projection only; not a validated clinical diagnostic classifier, not a final tissue-of-origin diagnosis, and not a supervised CUP classifier.

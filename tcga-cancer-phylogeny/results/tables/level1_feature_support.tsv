@@ -1,0 +1,34 @@
+project_id	project_code	cancer_name	broad_group	level2_group	mutation_n_samples	copy_number_n_samples	expression_n_samples
+TCGA-ACC	ACC	Adrenocortical Carcinoma	Neuroendocrine/adrenal/paraganglioma	adrenal	92	92	79
+TCGA-BLCA	BLCA	Bladder Urothelial Carcinoma	Carcinoma	urothelial	411	411	406
+TCGA-BRCA	BRCA	Breast Invasive Carcinoma	Carcinoma	breast	933	933	931
+TCGA-CESC	CESC	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	Carcinoma	gynecologic_squamous_adeno	291	291	288
+TCGA-CHOL	CHOL	Cholangiocarcinoma	Carcinoma	gi_hepatobiliary	36	36	36
+TCGA-COAD	COAD	Colon Adenocarcinoma	Carcinoma	gi_colorectal	408	408	403
+TCGA-DLBC	DLBC	Lymphoid Neoplasm Diffuse Large B-cell Lymphoma	Hematolymphoid	lymphoid	37	37	37
+TCGA-ESCA	ESCA	Esophageal Carcinoma	Carcinoma	gi_esophageal	185	185	184
+TCGA-GBM	GBM	Glioblastoma Multiforme	CNS/glial	adult_glioma	403	403	160
+TCGA-HNSC	HNSC	Head and Neck Squamous Cell Carcinoma	Carcinoma	pan_squamous	509	509	501
+TCGA-KICH	KICH	Kidney Chromophobe	Carcinoma	kidney	66	66	66
+TCGA-KIRC	KIRC	Kidney Renal Clear Cell Carcinoma	Carcinoma	kidney	370	370	368
+TCGA-KIRP	KIRP	Kidney Renal Papillary Cell Carcinoma	Carcinoma	kidney	282	282	281
+TCGA-LAML	LAML	Acute Myeloid Leukemia	Hematolymphoid	myeloid	140	140	122
+TCGA-LGG	LGG	Brain Lower Grade Glioma	CNS/glial	adult_glioma	526	526	526
+TCGA-LIHC	LIHC	Liver Hepatocellular Carcinoma	Carcinoma	gi_hepatobiliary	365	365	360
+TCGA-LUAD	LUAD	Lung Adenocarcinoma	Carcinoma	lung_adeno	569	569	513
+TCGA-LUSC	LUSC	Lung Squamous Cell Carcinoma	Carcinoma	pan_squamous	485	485	482
+TCGA-MESO	MESO	Mesothelioma	Mesothelial	mesothelial	82	82	82
+TCGA-OV	OV	Ovarian Serous Cystadenocarcinoma	Carcinoma	gynecologic	412	412	207
+TCGA-PAAD	PAAD	Pancreatic Adenocarcinoma	Carcinoma	gi_pancreatic	178	178	171
+TCGA-PCPG	PCPG	Pheochromocytoma and Paraganglioma	Neuroendocrine/adrenal/paraganglioma	paraganglioma	184	184	184
+TCGA-PRAD	PRAD	Prostate Adenocarcinoma	Carcinoma	prostate	498	498	497
+TCGA-READ	READ	Rectum Adenocarcinoma	Carcinoma	gi_colorectal	151	151	143
+TCGA-SARC	SARC	Sarcoma	Sarcoma	sarcoma	239	239	237
+TCGA-SKCM	SKCM	Skin Cutaneous Melanoma	Melanocytic	melanoma	468	468	467
+TCGA-STAD	STAD	Stomach Adenocarcinoma	Carcinoma	gi_gastric	439	439	412
+TCGA-TGCT	TGCT	Testicular Germ Cell Tumors	Germ cell	germ_cell	151	151	151
+TCGA-THCA	THCA	Thyroid Carcinoma	Carcinoma	thyroid	500	500	498
+TCGA-THYM	THYM	Thymoma	Other or mixed	thymic	123	123	119
+TCGA-UCEC	UCEC	Uterine Corpus Endometrial Carcinoma	Carcinoma	gynecologic	531	531	517
+TCGA-UCS	UCS	Uterine Carcinosarcoma	Other or mixed	gynecologic_mixed	57	57	57
+TCGA-UVM	UVM	Uveal Melanoma	Melanocytic	melanoma	80	80	80
